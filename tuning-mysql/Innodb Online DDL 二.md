@@ -2,7 +2,7 @@
 
 DML 能执行的一个必要条件是它要能拿到表的 `metadata` 读锁，而 DDL 是要改表定义所以它要拿到表的 `metadata` 写锁。可以看出 DDL 和 DML 是有可能起冲突的，lock 选项可以指定 DDL 的上锁模式，尽可能的让 DDL 执行的过程中不阻塞 DML。
 
-![innodb-online-ddl ](static/2020-11/innodb-online-ddl-001.png)
+![innodb-online-ddl](static/2020-11/innodb-online-ddl-001.png)
 
 ---
 
