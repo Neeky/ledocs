@@ -107,7 +107,7 @@ mysql> show global variables like 'log_bin';
 ```
 对数据库库进行写入压力测试，耗时 12.84s  tps 6228.97
 ```
-mtls-perf-bench --host=127.0.0.1 --port=3306 --user=root --password=dbma@0352 --ints=4 --floats=2 --varchars=2 --parallel=8 --rows=80000 insert
+mtls-perf-bench --host=127.0.0.1 --port=3306 --user=root --password=xxxx --ints=4 --floats=2 --varchars=2 --parallel=8 --rows=80000 insert
 2020-03-17 16:47:46,560  mtls-perf-bench  2685  MainThread  INFO  start time = 1584434866.560359
 2020-03-17 16:47:46,560  mtls-perf-bench  2685  MainThread  INFO  ****
 2020-03-17 16:47:46,560  mtls-perf-bench  2685  MainThread  INFO  ****
