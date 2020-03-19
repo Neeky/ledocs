@@ -9,11 +9,11 @@
 dbm-agent 要安装在你用于部署 MySQL 数据库的主机上，为了方便使用 dbm-agent 提供了一些方便的命令行来完成日常任务，不强制和 dbm-center一起使用，如果你需要 web 管理页面的话那你需要 dbm-center 。 下面以单独使用 dbm-agent 为例。
 
 ```bash
-# 安装
+#安装
 sudo su 
 pip3 install dbm-agent
 
-# 配置初始化
+#配置初始化
 dbm-agent init
 
 2020-03-19 10:24:31,063 INFO  user 'dbma' not exists going to create it 
@@ -30,7 +30,7 @@ dbm-agent init
 2020-03-19 10:24:31,600 INFO monitor-gateway render complete
 2020-03-19 10:24:31,606 INFO init complete
 
-# 初始化完成之后会自动拉起 dbm-monitor-gateway(数据库监控) 服务
+#初始化完成之后会自动拉起 dbm-monitor-gateway(数据库监控) 服务
 systemctl status dbm-monitor-gatewayd
 
 ● dbm-monitor-gatewayd.service - dbm monitor gateway
@@ -41,7 +41,7 @@ systemctl status dbm-monitor-gatewayd
            └─1568 /usr/local/python-3.8.1/bin/python3.8 /usr/local/python/bin/dbm-monitor-gate...
 3月 19 10:24:31 lestudio systemd[1]: Started dbm monitor gateway.
 
-# 监控服务以守护进程运行
+#监控服务以守护进程运行
 ps -ef | grep dbm-monitor
 
 dbma       1568      1  0 10:24 ?        00:00:01 /usr/local/python-3.8.1/bin/python3.8 /usr/local/python/bin/dbm-monitor-gateway --monitor-user=monitor --monitor-password=dbma@0352 --bind-ip=127.0.0.1 --bind-port=8080 start
@@ -49,7 +49,7 @@ dbma       1568      1  0 10:24 ?        00:00:01 /usr/local/python-3.8.1/bin/py
 ```
 下载 MySQL 二进制包到 dbm-agent 包目录。
 ```bash
-# 下载 MySQL 二进制包
+#下载 MySQL 二进制包
 cd /usr/local/dbm-agent/pkg/ 
 wget https://dev.mysql.com/get/Downloads/MySQL-8.0/mysql-8.0.19-linux-glibc2.12-x86_64.tar.xz
 ```
@@ -98,17 +98,17 @@ mysql> select version();
 ## 自动化监控
 dbm-agent 初始化之后监控服务就在后台运行了，它会定期的扫描端口看有没有新的 MySQL 实例被安装，如果发现了新实例就把它监控起来；并把监控项用 http 协议暴露出去。
 ```bash
-# 查看当前主机上有哪些实例
+#查看当前主机上有哪些实例
 curl http://127.0.0.1:8080/instances/ 
 [3306]
 
-# 查看给定实例的监控项
+#查看给定实例的监控项
 curl http://127.0.0.1:8080/instances/3306/com_select
 {
     "com_select": "90"
 }
 
-# 查看给定实例的所有监控项
+#查看给定实例的所有监控项
 curl http://127.0.0.1:8080/instances/3306/
 {                                                                                                
     "aborted_clients": "0",                                                                      
