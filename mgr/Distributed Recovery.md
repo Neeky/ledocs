@@ -1,5 +1,5 @@
 ## Distributed Recovery 
-MGR 中把一个成功从`start group_replication` 开始到这个成员的状态为 `online`的这个恢复过程就称之为 `Distributed Recovery`
+MGR 中把一个成员从`start group_replication` 开始到这个成员的状态为 `online`的这个恢复过程就称之为 `Distributed Recovery`
 
 ---
 
