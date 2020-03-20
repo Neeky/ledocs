@@ -1,5 +1,5 @@
 ## No module named _bz2 异常
-背景一个新的 python3 环境在我想导入 pandas 包的时候报错了
+背景一个新的 python3 环境在我想导入 pandas 包的时候报错了。
 ```python
 import pandas
 Traceback (most recent call last):
@@ -31,7 +31,7 @@ ModuleNotFoundError: No module named '_bz2'
 ---
 
 ## 分析问题
-从日志上看有这么一条关键信息
+从日志上看有这么一条关键信息。
 ```bash
 ModuleNotFoundError: No module named '_bz2'
 ```
@@ -40,7 +40,7 @@ ModuleNotFoundError: No module named '_bz2'
 ---
 
 ## 解决方案
-第一步先安装依赖
+第一步先安装依赖。
 ```bash
 yum -y install bzip2 bzip2-devel
 
@@ -48,7 +48,7 @@ yum -y install bzip2 bzip2-devel
 # yum -y install openssh openssh-clients gcc gcc-c++ libffi libyaml-devel libffi-devel zlib zlib-devel openssl openssl-devel libyaml sqlite-devel libxml2 libxslt-devel libxml2-devel bzip2 bzip2-devel
         
 ```
-第二步编译安装 python-3.7
+第二步编译安装 python-3.7。
 ```bash
 #编译安装
 cd /tmp/
@@ -68,7 +68,7 @@ pip install pandas
 ---
 
 ## 检查
-检查 pandas 能不能正常导入
+检查 pandas 能不能正常导入。
 ```bash                                                            
 [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)] on linux
 Type "help", "copyright", "credits" or "license" for more information.
