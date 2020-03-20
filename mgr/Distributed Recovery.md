@@ -26,7 +26,7 @@ MGR 中把一个成员从`start group_replication` 开始到这个成员的状�
 ---
 
 ## DR2阶段
-新加入成员开始侯追日志
+新加入成员开始追日志
 ![gr-recovery-3.png](static/2020-12/gr-recovery-3.png)
 
 ---
