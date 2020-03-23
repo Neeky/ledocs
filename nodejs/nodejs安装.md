@@ -1,5 +1,6 @@
 ## 概要
 在 Centos-7 操作系统下安装 nodejs 环境
+
 ![nodejs](static/2020-13/nodejs.png)
 
 ---
