@@ -3,6 +3,8 @@
 
 ![dbm](static/2020-12/dbm.png)
 
+google-adsense
+
 ---
 
 ## dbm-agent安装与配置
