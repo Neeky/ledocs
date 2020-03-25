@@ -6,6 +6,7 @@ innodb_flush_log_at_trx_commit 用于平衡数据库性能与宕机后数据的�
 
 ## 1
 当 innodb_flush_log_at_trx_commit = 1 每一次 commit 之前都会把日志刷新到磁盘；因为先写日志再 commit 所以它是宕机安全的；但是性能上就不怎么行了。
+google-adsense
 
 ---
 
