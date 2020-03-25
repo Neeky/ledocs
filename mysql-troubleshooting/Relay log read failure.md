@@ -5,13 +5,12 @@ Last_Error: Relay log read failure: Could not parse relay log event entry. The p
 Skip_Counter: 0
 ```
 ![Relay-log-read-failure](static/2020-12/Relay-log-read-failure.png)
-
+google-adsense
 
 ---
 
 ## 原因
 slave 的 IO 线程读取 master 的 binlog 保存到本地的 relaylog 中。如果 slave 在写 relaylog 的过程中 linux 宕机了，这就有可能导致 relaylog 中记录的 event 不完整，当主机重启、mysql数据库重启、SQL 线程开始读取 relaylog 的时候就会报这个错。
-google-adsense
 
 ---
 

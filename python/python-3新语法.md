@@ -1,6 +1,7 @@
 ## 概要
 python-3.8 引入了两个新的语法，一个是赋值表达式，另一个是仅位置参数；下面一个个的来说一下它们分别是什么解决什么问题。
 ![python-3.8-new-syntax.png](static/2020-12/python-3.8-new-syntax.png)
+google-adsense
 
 ---
 
@@ -35,7 +36,6 @@ if (lst_len := len(lst)) > 3:
     print(f"lst 太长了，最多只能 3 个，但是现在有了 {lst_len}")
 ```
 新语法存在的一些问题 1、由于是新语法自动格式化代码的工具还没有跟上，会格式化错误` (lst_len: = len(lst)) ` “:”应该和“=”在一起的，但是工具识别错误。
-google-adsense
 
 ---
 

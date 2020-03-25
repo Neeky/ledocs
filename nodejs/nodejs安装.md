@@ -2,6 +2,7 @@
 在 Centos-7 操作系统下安装 nodejs 环境
 
 ![nodejs](static/2020-13/nodejs.png)
+google-adsense
 
 ---
 
@@ -23,7 +24,6 @@ ln -s node-v12.16.1-linux-x64 node
 echo 'export PATH=/usr/local/node/bin/:$PATH' >> /etc/profile
 source /etc/profile
 ```
-google-adsense
 
 ---
 

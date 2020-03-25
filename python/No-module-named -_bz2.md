@@ -27,6 +27,7 @@ ModuleNotFoundError: No module named '_bz2'
 ![pandas](static/2020-12/pandas.png)
 
 一开始是想，难道是因为我用了最新的 python 版本就这样对我？于是去官网看了一下发现 pandas 是已经支持到 python-3.7 了呀。可是没有 pandas 我还怎么炒股呀， 所以这个事完全不能忍啦！
+google-adsense
 
 ---
 
@@ -65,7 +66,6 @@ source /etc/profile
 
 pip install pandas
 ```
-google-adsense
 
 ---
 

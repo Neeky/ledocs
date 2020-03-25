@@ -1,6 +1,7 @@
 ## 背景
 突然想知道 innodb_flush_log_at_trx_commit 参数的不同取值，对写入的性能的影响是怎样的。于是我做了如下测试
 ![innodb_flush_log_at_trx_commit](static/2020-12/innodb_flush_log_at_trx_commit.png)
+google-adsense
 
 ---
 

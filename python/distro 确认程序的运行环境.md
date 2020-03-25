@@ -2,6 +2,7 @@
 我想我的程序只在 Centos-7 操作系统下运行，如果是别的环境就直接报错退出。
 
 ![distro](static/2020-12/distro.png)
+google-adsense
 
 ---
 
@@ -16,7 +17,6 @@ In [2]: platform.linux_distribution()
 Out[2]: ('CentOS Linux', '7.6.1810', 'Core')
 ```
 >虽然自己解析`/etc/system-release`对于这个例子也是可行的，但是这个并不`pythonic`。
-google-adsense
 
 ---
 

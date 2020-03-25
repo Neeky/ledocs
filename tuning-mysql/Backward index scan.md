@@ -3,6 +3,7 @@
 感觉还是有点抽象，下面看一下我这几天遇到的一个 case ，我们的表上有一个自增的 id 列，这样新数据的 id 值就会比旧数据的 id 值大，业务会根据一定条件查询出满足条件的，最新的 10 行数据，最新的 10 行数据在 SQL 查询中可以用 `order by id desc limit 10` 来表达
 
 ![backward-index-scan](static/2020-11/Backward-index-scan.png)
+google-adsense
 
 ---
 

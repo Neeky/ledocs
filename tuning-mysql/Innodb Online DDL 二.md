@@ -3,6 +3,7 @@
 DML 能执行的一个必要条件是它要能拿到表的 `metadata` 读锁，而 DDL 是要改表定义所以它要拿到表的 `metadata` 写锁。可以看出 DDL 和 DML 是有可能起冲突的，lock 选项可以指定 DDL 的上锁模式，尽可能的让 DDL 执行的过程中不阻塞 DML。
 
 ![innodb-online-ddl](static/2020-11/innodb-online-ddl-001.png)
+google-adsense
 
 ---
 
@@ -12,7 +13,7 @@ DML 能执行的一个必要条件是它要能拿到表的 `metadata` 读锁，�
 2、执行阶段: 如果 clock 选项没有指定是 exclusive 那么这个阶段不会把元数据共享锁升级到排他锁
 
 3、提交新的表定义阶段: 这个阶段一定会把元数据共享升级为元数据排他锁
-google-adsense
+
 
 ---
 

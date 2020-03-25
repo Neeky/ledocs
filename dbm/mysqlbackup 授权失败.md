@@ -18,6 +18,7 @@
 2020-03-13T10:33:28.188198+08:00 0 [System] [MY-011323] [Server] X Plugin ready for connections. Socket: '/tmp/mysqlx-33060.sock' bind-address: '::' port: 33060
 
 ```
+google-adsense
 
 ---
 
@@ -46,7 +47,6 @@ init-file 的写法正好命中这个问题
 grant create,insert, drop, update on mysql.backup_progress to 'mysqlbackup'@'127.0.0.1';
 grant alter on mysql.backup_progress to 'mysqlbackup'@'127.0.0.1';
 ```
-google-adsense
 
 ---
 

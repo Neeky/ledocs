@@ -19,6 +19,7 @@ select c1,c2,c3 from tempdb.t;
 +----------+----------------+------------------+
 1 row in set (0.00 sec)
 ```
+google-adsense
 
 ---
 
