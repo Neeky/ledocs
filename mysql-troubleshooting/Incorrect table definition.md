@@ -16,6 +16,8 @@ ERROR 1075 (42000): Incorrect table definition; there can be only one auto colum
 ## 原因
 innodb 引擎有一个非常有意思的限制，当一个列被定义成 auto_increment 的时候，这个列要么独自作为主键；如果是想用联合索引做主键那么这个列一定要放到联合索引的第一列。
 
+google-adsense
+
 ---
 
 ## 解决方案

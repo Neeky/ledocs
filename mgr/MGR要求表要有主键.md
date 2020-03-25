@@ -3,6 +3,8 @@
 
 ![mgr-error](static/2020-10/mgr-error.png)
 
+google-adsense
+
 ---
 
 ## 故障重现

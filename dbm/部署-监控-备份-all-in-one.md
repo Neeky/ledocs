@@ -1,8 +1,6 @@
 ## dbm数据库管理中心
 有没有一套开源的专门用来管理 MySQL 数据库的软件呢？还真有这就是 dbm 它能完成各类 MySQL 环境的自动部署、监控、备份等工作；dbm 的整体架构如图，这里我们主要介绍一下 dbm-agent。
 
-google-adsense
-
 ![dbm](static/2020-12/dbm.png)
 
 ---
