@@ -30,7 +30,6 @@ CREATE TABLE `t` (
 
 -- 填充上数据 
 ```
-google-adsense
 
 ---
 

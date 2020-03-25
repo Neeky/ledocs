@@ -43,8 +43,6 @@ mtls-perf-bench --host=127.0.0.1 --port=3306 --user=root --password=xxxx --ints=
 2020-03-17 16:49:09,877  mtls-perf-bench  2699  MainThread  INFO  stop time = 1584434949.8771398
 2020-03-17 16:49:09,877  mtls-perf-bench  2699  MainThread  INFO  TPS:10671.95 duration 7.50(s)
 ```
-google-adsense
-
 ---
 
 ## 等于1的场景

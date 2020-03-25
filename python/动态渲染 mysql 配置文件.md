@@ -50,7 +50,6 @@ port    = 3306
 user    = mysql3306
 
 ```
-google-adsense
 
 ---
 

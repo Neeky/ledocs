@@ -43,7 +43,6 @@ Out[8]: '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
 In [9]: string.whitespace                                                       
 Out[9]: ' \t\n\r\x0b\x0c'
 ```
-google-adsense
 
 ---
 

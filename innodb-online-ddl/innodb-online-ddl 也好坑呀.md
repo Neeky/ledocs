@@ -31,8 +31,6 @@ google-adsense
 
 根据官方提供的信息可以知道，这种情况只有在 DDL 期间要执行 DML 时才有可能发生；这样的话解决办法也就有了，一来我们可以把 DML 阻塞住以此来保证 DDL 的成功执行，二来我们可以直接用 pt-online-schema-change 这个工具来解决。
 
-google-adsense
-
 ---
 
 ## 解决方案
