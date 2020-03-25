@@ -10,6 +10,7 @@ MySQL-8.0 之前的版本只要注释掉 `binlog` 相关的配置项 MySQL 就�
 [mysqld]
 #log_bin = mysql-bin
 ```
+google-adsense
 
 ---
 

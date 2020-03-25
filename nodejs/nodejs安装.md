@@ -23,6 +23,8 @@ ln -s node-v12.16.1-linux-x64 node
 echo 'export PATH=/usr/local/node/bin/:$PATH' >> /etc/profile
 source /etc/profile
 ```
+google-adsense
+
 ---
 
 ## 验证是否安装成功

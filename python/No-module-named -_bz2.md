@@ -65,6 +65,8 @@ source /etc/profile
 
 pip install pandas
 ```
+google-adsense
+
 ---
 
 ## 检查

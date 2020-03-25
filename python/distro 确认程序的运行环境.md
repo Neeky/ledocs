@@ -16,6 +16,7 @@ In [2]: platform.linux_distribution()
 Out[2]: ('CentOS Linux', '7.6.1810', 'Core')
 ```
 >虽然自己解析`/etc/system-release`对于这个例子也是可行的，但是这个并不`pythonic`。
+google-adsense
 
 ---
 

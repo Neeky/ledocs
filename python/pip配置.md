@@ -11,6 +11,8 @@ pip3 的配置可以通过 pip3 命令完成，不需要手工编辑配置文件
 pip3 config set global.index-url  https://mirrors.cloud.tencent.com/pypi/simple
 pip3 config set global.trusted-host  mirrors.cloud.tencent.com
 ```
+google-adsense
+
 ---
 
 ## 配置 pip 使用阿里云镜像
