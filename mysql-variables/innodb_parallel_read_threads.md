@@ -1,5 +1,5 @@
 ## innodb_parallel_read_threads
-这个参数控制着聚集索引扫描时 innodb 可以通过多个线程并发的读取页面以做到更快的把页面读出来，从而提升查询速度，并发的大小就由 innodb_parallel_read_threads 控制。
+聚集索引扫描时 innodb 可以通过多个线程并发的读取页面来做到更快的把页面读出来，从而提升查询效率，并发线程的数量就由 innodb_parallel_read_threads 这个参数控制。
 
 ![innodb_parallel_read_threads](static/2020-13/innodb_parallel_read_threads.png)
 
