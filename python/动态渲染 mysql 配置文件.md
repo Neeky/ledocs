@@ -8,6 +8,7 @@ port    = {{port}}
 user    = {{user}}
 ```
 ![my-cnf-jinja](static/2020-12/my-cnf-jinja.png)
+
 google-adsense
 
 ---

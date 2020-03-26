@@ -1,6 +1,8 @@
 ## 背景
 MySQL-8.0 版本下增加了一个专门的参数 `skip_log_bin` 来控制是否启用 `binlog`；相比之前的处理方法有明显的不同。
+
 ![skip-log-bin](static/2020-12/skip-log-bin.png)
+
 google-adsense
 
 ---

@@ -1,5 +1,6 @@
 ## 背景
 有同事反馈他创建表的时候报错了，表结构大致如下。
+
 ```sql
 create table t(
     id int not null auto_increment,
@@ -10,6 +11,7 @@ create table t(
 ERROR 1075 (42000): Incorrect table definition; there can be only one auto column and it must be defined as a key
 ```
 ![Incorrect-table-definition](static/2020-12/Incorrect-table-definition.png)
+
 google-adsense
 
 ---

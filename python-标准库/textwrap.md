@@ -2,6 +2,7 @@
 textwrap 这个库主要作用是对文本进行各种各样的美化，让它在字符页面中尽可能的好看。
 
 ![shorten](static/2020-13/shorten.png)
+
 google-adsense
 
 ---

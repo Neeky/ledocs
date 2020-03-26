@@ -2,6 +2,7 @@
 在 python 中测试(比较)一个对象是不是 None 可以有两种不同的写法，一个很自然的想法就是这两个写法下，哪一个的效率会更高一些呢？
 
 ![is-vs-equall](static/2020-8/is-vs-equal.png)
+
 google-adsense
 
 ---

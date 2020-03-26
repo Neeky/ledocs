@@ -1,5 +1,6 @@
 ## innodb_flush_log_at_trx_commit
 innodb_flush_log_at_trx_commit 用于平衡数据库性能与宕机后数据的可恢复性(安全性)；为了保证安全性每一笔写操作都要需要对应的日志被刷新到磁盘，然而 IO 操作是比较慢的，如果我们对安全性要求不高那大可不要每次 commit 前都要把日志刷新到磁盘。
+
 google-adsense
 
 ---

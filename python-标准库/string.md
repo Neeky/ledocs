@@ -1,6 +1,8 @@
 ## string
 `string` 这个库在 `python-2` 的年代就已经是标准库中的一员了，主要的功能就是用来做字符串处理的。总的来讲包含三个大的部分，分别是字符串常量、模板、辅助方法。
+
 ![string](static/2020-13/string.png)
+
 google-adsense
 
 ---

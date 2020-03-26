@@ -2,6 +2,7 @@
 我想我的程序只在 Centos-7 操作系统下运行，如果是别的环境就直接报错退出。
 
 ![distro](static/2020-12/distro.png)
+
 google-adsense
 
 ---
