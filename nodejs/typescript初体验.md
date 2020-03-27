@@ -7,7 +7,7 @@ google-adsense
 
 ---
 
-## typescript编译器安装
+## typescript 编译器安装
 typescript 在 js 的基础之上加上了强类型，它的实现方式就是代码先用 typescript 书写，然后再用 tsc 这个编译器把 typescript 代码编译成 js 代码。转了一圈，不过这样就可以在编译时做类型检查了。
 
 typescript 的编译器是一个 node 软件包，所以可以直接通过 npm 来安装。
