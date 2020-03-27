@@ -33,8 +33,9 @@ hi();
 ```
 第二步：编译 main.ts 编译完成之后就会得到一个叫 main.js 的文件。
 ```bash
+#编译
 tsc main.ts 
-#
+#运行
 node main.js
 hello world
 ```
