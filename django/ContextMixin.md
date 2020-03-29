@@ -20,7 +20,11 @@ class ContextMixin:
             kwargs.update(self.extra_context)
         return kwargs
 ```
-可以看到 get_context-data 函数只做了两件事  1、把 kwargs.view 设置为 self 。 2、当 extra_context 不等于 None 的时候把 extra_context 中的键值更新到 kwargs 字典当中去。
+可以看到 get_context-data 函数只做了两件事  
+
+1、把 kwargs.view 设置为 self 。 
+
+2、当 extra_context 不等于 None 的时候把 extra_context 中的键值更新到 kwargs 字典当中去。
 
 ---
 
