@@ -1,5 +1,5 @@
 ## 概要
-var 是老版本 js 中声明亦是的方式，除非对它理解的很深入，不然非常容易出问题。
+var 是老版本 js 中声明变量的方式，除非对它理解的很深入，不然非常容易出问题。
 
 ![var-vs-let](static/2020-14/var-vs-let.png)
 
@@ -32,7 +32,7 @@ tsc main.ts && node main.js
 ```
 ---
 
-非正常情况一：
+非正常情况一、可以访问到其它块中声明的变量。
 ```ts
 function outer(isChecking: boolean = true) {
     if (isChecking) {
@@ -92,6 +92,7 @@ tsc main.ts && node main.js
 function main() {
     console.log("start for");
     for (var i = 0; i < 10; i++) {
+        // 延时执行
         setTimeout(function () {
             console.log(i);
         }, 100 * i);
