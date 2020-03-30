@@ -24,6 +24,8 @@ id(z) = 140159825804672   z = {'hello': 'word', 'name': 'tim'}
 
 ![old-style](static/2020-14/old-style.png)
 
+google-adsense
+
 ---
 
 ## 看看我们都干了什么
