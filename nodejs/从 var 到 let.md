@@ -25,7 +25,7 @@ function outer() {
 
 outer();
 ```
-编译运行
+编译运行。
 ```bash
 tsc main.ts && node main.js
 200
@@ -54,7 +54,7 @@ function outer(isChecking: boolean = true) {
 
 outer(true);
 ```
-编译运行
+编译运行。
 ```bash
 tsc main.ts && node main.js
 isChcking = true     o = 100
@@ -73,7 +73,7 @@ function main() {
 }
 main();
 ```
-编译运行
+编译运行。
 ```bash
 tsc main.ts && node main.js
 0
@@ -87,7 +87,7 @@ tsc main.ts && node main.js
 8
 9
 ```
-目前看没有问题，不过只要代码改动一点点就可以看到问题了
+目前看没有问题，不过只要代码改动一点点就可以看到问题了。
 ```ts
 function main() {
     console.log("start for");
@@ -132,7 +132,7 @@ function main() {
 }
 main();
 ```
-编译会报错
+编译会报错。
 ```bash
 tsc main.ts && node main.js
 main.ts:5:17 - error TS2304: Cannot find name 'isChecking'.
@@ -158,7 +158,7 @@ function main() {
 }
 main();
 ```
-如果改成 let 那么 for 的外面就不再能访问到 i 了
+如果改成 let 那么 for 的外面就不再能访问到 i 了。
 ```ts
 function main() {
     for (let i = 0; i < 3; i++) {
@@ -168,7 +168,7 @@ function main() {
 }
 main();
 ```
-编译运行
+编译运行。
 ```bash
 tsc main.ts && node main.js
 main.ts:5:17 - error TS2304: Cannot find name 'i'.
@@ -194,7 +194,7 @@ function main() {
 }
 main();
 ```
-编译运行
+编译运行。
 ```bash
 tsc main.ts && node main.js
 start for
@@ -229,7 +229,7 @@ tsc main.ts && node main.js
 undefined
 100
 ```
-let 要求一定要先声明后使用
+let 要求一定要先声明后使用。
 ```ts
 function main() {
     console.log(i);
@@ -238,7 +238,7 @@ function main() {
 }
 main();
 ```
-编译报错
+编译报错。
 ```bash
 tsc main.ts && node main.js
 main.ts:2:17 - error TS2448: Block-scoped variable 'i' used before its declaration.
@@ -256,4 +256,46 @@ Found 1 error.
 ```
 
 ---
+
+## let 不再能重复声明
+var 声明是支持重复声明的。
+```ts
+function main() {
+    var x = 100;
+    var x = 200;
+}
+main();
+```
+let 如果重复声明会报错。
+```ts
+function main() {
+    let x = 100;
+    let x = 200;
+}
+main();
+```
+编译报错。
+```bash
+tsc main.ts && node main.js
+main.ts:2:9 - error TS2451: Cannot redeclare block-scoped variable 'x'.
+
+2     let x = 100;
+          ~
+
+main.ts:3:9 - error TS2451: Cannot redeclare block-scoped variable 'x'.
+
+3     let x = 200;
+          ~
+
+
+Found 2 errors.
+```
+注意这样的写法也算是重复声明。
+```ts
+function main(x) {
+    let x = 100;
+}
+```
+---
+
 
