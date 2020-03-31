@@ -89,3 +89,5 @@ tsc main.ts && node main.js
 { hello: 'world' }
 { hello: 'world', foo: 'bar' }
 ```
+
+---
