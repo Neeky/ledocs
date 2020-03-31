@@ -53,7 +53,7 @@ mysql> select cast('123' as unsigned);
 +-------------------------+
 1 row in set (0.00 sec)
 ```
-2、cast 支持的类型列表如下
+2、cast 支持的类型列表如下。
 ```bash
 1、BINARY[(N)]
 2、CHAR[(N)] [charset_info]

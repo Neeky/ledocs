@@ -6,7 +6,7 @@ let y = x;
 
 console.log(x, y);
 ```
-运行效果
+运行效果。
 ```bash
 tsc main.ts && node main.js
 { hello: 'world' } { hello: 'world' }
@@ -38,7 +38,7 @@ node main.ts
 ```
 ---
 
-同理 x 标签也可以被撕下来
+同理 x 标签也可以被撕下来。
 ```ts
 let x = { 'hello': 'world' };
 
@@ -48,7 +48,7 @@ x = { 'name': 'tim' };
 
 console.log(x);
 ```
-运行效果
+运行效果。
 ```bash
 node main.ts
 { name: 'tim' }
@@ -83,7 +83,7 @@ console.log(x);
 x['foo'] = 'bar';
 console.log(x);
 ```
-运行效果
+运行效果。
 ```bash
 tsc main.ts && node main.js
 { hello: 'world' }
