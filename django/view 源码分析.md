@@ -19,11 +19,6 @@ google-adsense
 as_view 的关键逻辑如下。
 ```python
 class View:
-    """
-    Intentionally simple parent class for all views. Only implements
-    dispatch-by-method and simple sanity checking.
-    """
-    noter = noter.getChild("View")
 
     http_method_names = ['get', 'post', 'put', 'patch', 'delete', 'head', 'options', 'trace']
 
