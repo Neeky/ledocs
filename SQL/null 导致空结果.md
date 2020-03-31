@@ -1,5 +1,5 @@
 ## 概要
-null 在 SQL 语言中的位置比较特别，它表示不知道，并且只能通过 is 来比较。
+null 在 SQL 语言中的位置比较特别，它表示不知道，并且只能通过 is 来测试。
 ```sql
 mysql> select null = null,null != null,null is null ,null is not null;
 +-------------+--------------+--------------+------------------+
@@ -43,7 +43,8 @@ mysql> select * from person where id in (1,2);
 ```
 如果我们想把 1,2 两行排除掉，并且一不小心多写了一个 null 看一下会怎么样。
 ```sql
-mysql> select * from person where id not in (1,2,null);
+mysql> select * from person 
+            where id not in (1,2,null);
 Empty set (0.00 sec)
 ```
 由于 null 的出现使得结果集为空了。
