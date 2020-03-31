@@ -1,6 +1,7 @@
 ## 概要
 null 在 SQL 语言中的位置比较特别，它表示不知道，并且只能通过 is 来测试。
 ```sql
+-- 不管是 = 还是 != 都会返回 null，想知道是不是 null 有用的只有 is
 mysql> select null = null,null != null,null is null ,null is not null;
 +-------------+--------------+--------------+------------------+
 | null = null | null != null | null is null | null is not null |
