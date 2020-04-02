@@ -1,7 +1,9 @@
 ## 概要
-如何发布自己的 python 软件包，让其他人能通过 pip install xxx 来安装我们发布的软件。下面以发布 woy 小项目为例子。
+如何发布自己的 python 软件包，让其他人能通过 pip install xxx 来安装我们发布的软件。下面以发布 week-of-year 小项目为例子。
 
 ![week-of-year](static/2020-14/week-of-year.png)
+
+google-adsense
 
 ---
 
