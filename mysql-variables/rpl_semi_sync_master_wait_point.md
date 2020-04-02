@@ -1,7 +1,5 @@
 ## lossless
-要讲清理 lossless 就是要搞懂 `rpl_semi_sync_master_wait_point` 参数的两个取值 `AFTER_SYNC` | `AFTER_COMMIT` 有什么区别。
-
-MySQL(innodb) 是支持事务的，要支持事务那就要日志先行，也就是说一个事务可以提交的前提是这个事务对应的日志都已经刷新到磁盘。
+要讲清理 lossless 就是要搞懂 `rpl_semi_sync_master_wait_point` 参数的两个取值 `AFTER_SYNC` | `AFTER_COMMIT` 有什么区别。MySQL(innodb) 是支持事务的，要支持事务那就要日志先行，也就是说一个事务可以提交的前提是这个事务对应的日志都已经刷新到磁盘。
 
 另外本文假设 MySQL 处在双1模式，也就是说两个关于日志刷新的重要参数的取值如下。
 
@@ -44,24 +42,16 @@ commit 不是一个时间上的点，它是时间轴上的一条线段，也就�
 ---
 
 ## 等于 AFTER_SYNC
-当 rpl_semi_sync_master_wait_point = AFTER_SYNC `master` 就会在 AFTER_SYNC 这个时间段内等待 `slave` 确认信号。如果这个时候 `master` 宕机了，那么
-这个事务在 `master` 上是不会被提交的，因为它本身并不有走过 `commit` 这个关键时间点。
-
-如果 `slave` 收到了这个事务的完整日志，那么这个事务会在 slave 上提交，如果没有接收完成，那么这个事务在 `slave` 上也不会完成提交。最终 `slave` 的事务数至少是等于`master`的事务数。
+当 rpl_semi_sync_master_wait_point = AFTER_SYNC 时 `master` 就会在 AFTER_SYNC 这个时间段内等待 `slave` 确认信号。如果这个时候 `master` 宕机了，那么这个事务在 `master` 上是不会被提交的，因为它本身并不有走过 `commit` 这个关键时间点。如果 `slave` 收到了这个事务的完整日志，那么这个事务会在 slave 上提交，如果没有接收完成，那么这个事务在 `slave` 上也不会完成提交。最终 `slave` 的事务数至少是等于`master`的事务数。
 
 因为等待的时候，事务并不有在 `master` 上提交，所以其它会话并看不到事务的修改。
 
 ---
 
 ## 等于 AFTER_COMMIT
-当 rpl_semi_sync_master_wait_point = AFTER_COMMIT `master` 就会在 AFTER_COMMIT 这个时间段内等待 `slave` 确认信号。
-
-如果这个时候 `master` 宕机了，那么这个事务在 `master` 已经是提交成功的状态，只是由于在等 `slave` 的确认信号没有返回给 `client`而已。
-
-如果 `slave` 收到了这个事务的完整日志，那么这个事务会在 slave 上提交，如果没有接收完成，那么这个事务在 `slave` 上就不会提交。最终 `slave` 的事务数至多是等于`master`的事务数。
+当 rpl_semi_sync_master_wait_point = AFTER_COMMIT 时 `master` 就会在 AFTER_COMMIT 这个时间段内等待 `slave` 确认信号。如果这个时候 `master` 宕机了，那么这个事务在 `master` 已经是提交成功的状态，只是由于在等 `slave` 的确认信号没有返回给 `client`而已。如果 `slave` 收到了这个事务的完整日志，那么这个事务会在 slave 上提交，如果没有接收完成，那么这个事务在 `slave` 上就不会提交。最终 `slave` 的事务数至多是等于`master`的事务数。
 
 因为等待的时候，事务已经有在 `master` 上提交，所以其它会话能看到事务的修改。
-
 
 ---
 
