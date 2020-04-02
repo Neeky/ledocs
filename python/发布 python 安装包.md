@@ -30,7 +30,7 @@ tree .
 ---
 
 
-## 第二步 配置项目
+## 第二步 配置 setup.py
 整个软件包的配置是在 setup.py 这个文件中定义的，下面来介绍一下这个文件。
 ```python
 from setuptools import setup
@@ -57,7 +57,7 @@ setup(name='week-of-year',                    #软件包的名字
           'Programming Language :: Python :: 3.8']
       )
 ```
-事实上这个 setup.py 也不要死记，`ctrl+c ctrl+v`然后按自己的需改一改就行了。
+事实上这个 `setup.py` 也不要死记，`ctrl+c ctrl+v` 然后按自己的需求改一改就行了。
 
 ---
 
