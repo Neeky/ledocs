@@ -1,5 +1,5 @@
 ## 概要
-如何发布自己的 python 软件包，让其他人能通过 pip install xxx 来安装我们发布的软件。下面以发布 week-of-year 小项目为例子。
+还记得 Python 可以用 pip install 来安装依赖包吗？那这些包是怎么制作出来的呢？下面以发布 week-of-year 这个软件包为例，来讲一下它的详细制作过程。
 
 ![week-of-year](static/2020-14/week-of-year.png)
 
@@ -8,25 +8,24 @@ google-adsense
 ---
 
 ## week-of-year
-为了让我们的项目尽可能的有一定的意义，不要让它成为 PyPI 上的垃圾，我会在这个包中实现一个 `week-of-year` 的命令，这个命令会打印当前是今年的第几周。
+为了让我们的项目尽可能的有意义，不要让它成为 PyPI 上的垃圾，我会在这个包中实现一个 `week-of-year` 的命令，这个命令会打印当前是今年的第几周。
 
 ---
 
 ## 第一步 创建项目
 创建这个项目的目录树，最终目录的
 ```bash
-tree wofy
-wofy
+tree .
+├── README.md
 ├── bin
 │   └── week-of-year
 ├── setup.py
 └── wofy
+    ├── __init__.py
     └── utils.py
 
-3 directories, 2 files
-
 ```
-整个项目的源码已经开源在 github ，所以这里就不对功能上的实现做过多的展开。
+整个项目的源码已经开源在 github ，所以这里就不对功能上的实现做过多的展开，这里会把主要精力用在如何制作发行包的说明上。
 
 ---
 
