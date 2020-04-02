@@ -43,7 +43,7 @@ mysql> select @@version;
 
 
 ## cast 要注意的地方
-1、如果想把数据转换成整数类型，不能使用 int，官方只给出了 `unsigned` 和`sigend`，可能这个是为了统一 big int 吧。
+1、如果想把数据转换成整数类型，不能使用 int，官方只给出了 `unsigned` 和`signed`，可能这个是为了统一 big int 吧。
 ```sql
 mysql> select cast('123' as unsigned);
 +-------------------------+
