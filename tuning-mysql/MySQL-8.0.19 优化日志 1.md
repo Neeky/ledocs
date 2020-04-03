@@ -49,7 +49,7 @@ mysql> show slave status \G
 dbm-agent 自动生成的配置文件如下。
 ```ini
 [mysqld]
-#### for basic
+####for basic
 user                                     = mysql3306
 basedir                                  = /usr/local/mysql-8.0.19-linux-glibc2.12-x86_64
 datadir                                  = /database/mysql/data/3306
@@ -79,7 +79,7 @@ sort_buffer_size                         = 256K
 join_buffer_size                         = 256K
 eq_range_index_dive_limit                = 200
 
-#### for table 
+####for table 
 big_tables                               = OFF
 sql_require_primary_key                  = OFF
 lower_case_table_names                   = 1
@@ -89,7 +89,7 @@ table_open_cache                         = 4000
 table_definition_cache                   = 2000
 table_open_cache_instances               = 32
 
-#### for net 
+####for net 
 max_allowed_packet                       = 1G
 connect_timeout                          = 10
 interactive_timeout                      = 28800
@@ -98,21 +98,21 @@ net_retry_count                          = 10
 net_write_timeout                        = 60
 net_buffer_length                        = 32K
 
-#### for logs 
+####for logs 
 log_output                               = FILE
 general_log                              = OFF
 general_log_file                         = general.log
-## error
+##error
 log_error                                = err.log
 log_statements_unsafe_for_binlog         = ON
-## slow
+##slow
 slow_query_log                           = ON
 slow_query_log_file                      = slow.log
 long_query_time                          = 2
 log_queries_not_using_indexes            = OFF
 log_slow_admin_statements                = OFF
 log_slow_slave_statements                = OFF
-## binlog
+##binlog
 log_bin                                  = /binlog/mysql/binlog/3306/mysql-bin
 binlog_checksum                          = none
 log_bin_trust_function_creators          = ON
@@ -136,7 +136,7 @@ binlog_cache_size                        = 96K
 binlog_group_commit_sync_delay           = 0
 binlog_group_commit_sync_no_delay_count  = 0
 
-#### for replication
+####for replication
 rpl_semi_sync_master_enabled             = 1
 rpl_semi_sync_slave_enabled              = 1
 rpl_semi_sync_master_timeout             = 1000
@@ -160,22 +160,22 @@ slave_max_allowed_packet                 = 1G
 
 
 
-#### for gtid
+####for gtid
 gtid_mode                                = ON
 binlog_gtid_simple_recovery              = ON
 enforce_gtid_consistency                 = ON
 gtid_executed_compression_period         = 1000
 
-#### for clone 
+####for clone 
 plugin-load-add                          = mysql_clone.so
 clone                                    = FORCE_PLUS_PERMANEN
 
-#### for engines 
+####for engines 
 default_storage_engine                   = innodb
 default_tmp_storage_engine               = innodb
 internal_tmp_mem_storage_engine          = TempTable
 
-#### for innodb
+####for innodb
 innodb_data_home_dir                     = ./
 innodb_data_file_path                    = ibdata1:64M:autoextend
 innodb_page_size                         = 16K
@@ -280,7 +280,7 @@ innodb_buffer_pool_size                  = 96G
 
 
 
-####  for performance_schema
+####for performance_schema
 performance_schema                                                      =ON  
 performance_schema_consumer_global_instrumentation                      =ON  
 performance_schema_consumer_thread_instrumentation                      =ON  
