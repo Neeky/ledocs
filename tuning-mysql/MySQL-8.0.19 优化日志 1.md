@@ -20,7 +20,7 @@ google-adsense
 
 ---
 
-## 安装 MySQL
+## 安装
 安装 Master。
 ```bash
 dbma-cli-single-instance --port=3306 --max-mem=131072 install
