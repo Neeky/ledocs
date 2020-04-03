@@ -8,6 +8,14 @@ MySQL-8.0.19 发布的第一时间 dbm 就提供了支持，那 dbm 自动化安
 |192.168.100.20|32(逻辑核心)|128G|4TSSD   |centos-7.6 | MySQL-8.0.19| Slave |
 
 ```
+
+---
+
+dbm-agent 在安装 MySQL 时会根据主机配置自动的完成参数优化，默认情况下的性能表现如下图。
+
+![](static/2020-14/mysql-8.0.19-015.png)
+
+
 google-adsense
 
 ---
