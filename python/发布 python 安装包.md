@@ -18,14 +18,14 @@ google-adsense
 tree .
 ├── README.md
 ├── bin
-│   └── week-of-year
-├── setup.py
-└── wofy
+│   └── week-of-year    #可执行文件
+├── setup.py            #包配置文件
+└── wofy                #库文件
     ├── __init__.py
     └── utils.py
 
 ```
-整个项目的源码已经开源在 github ，所以这里就不对功能上的实现做过多的展开，这里会把主要精力用在如何制作发行包的说明上。
+整个项目的源码已经开源在 github [wofy](https://github.com/Neeky/wofy)，所以这里就不对功能上的实现做过多的展开，这里会把主要精力用在如何制作发行包的说明上。
 
 ---
 
