@@ -10,7 +10,7 @@ SSLError: HTTPSConnectionPool(host='www.xxx.com.cn', port=443): Max retries exce
 
 ![ssl-error](static/2020-14/ssl-error.png)
 
-googl-adsense
+google-adsense
 
 ---
 
