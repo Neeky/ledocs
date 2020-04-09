@@ -13,7 +13,7 @@ def fun_div(x, y):
 
 def main():
     try:
-        # 故意把分母设置为 0
+        #故意把分母设置为 0
         fun_div(1, 0)
     except Exception as err:
         logging.error(err)
@@ -52,11 +52,11 @@ def fun_div(x, y):
 
 def main():
     try:
-        # 故意把分母设置为 0
+        #故意把分母设置为 0
         fun_div(1, 0)
     except Exception as err:
         logging.error(err)
-        # 打印堆栈信息
+        #打印堆栈信息
         traceback.print_exc()
 
 
@@ -95,10 +95,10 @@ def fun_div(x, y):
 
 def main():
     try:
-        # 故意把分母设置为 0
+        #故意把分母设置为 0
         fun_div(1, 0)
     except Exception as err:
-        # 打印异常信息、异常的堆栈信息
+        #打印异常信息、异常的堆栈信息
         logging.exception(err)
 
 
