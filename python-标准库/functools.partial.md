@@ -21,7 +21,7 @@ google-adsense
 ---
 
 ## 求和函数一
-假设有一个需求是给对给定的任意多个整数进行求和，python 代码可以这样
+假设有一个需求是给对给定的任意多个整数进行求和，python 代码可以这样。
 ```python
 #!/usr/bin/evn python3
 
@@ -53,7 +53,7 @@ python3 main.py
 
 不管求出来的和是多少，都要在这个的基础之上加上 100 再返回。
 
-解决方案一、在调用 fun_sum 的时候多加一个 100 的参数
+解决方案一、在调用 fun_sum 的时候多加一个 100 的参数。
 ```python
 #!/usr/bin/evn python3
 
@@ -85,7 +85,7 @@ python3 main.py
 
 ---
 
-增加一个新的函数把这个 + 100 的功能特异化一下。
+解决方案二、增加一个新的函数把这个 + 100 的功能特异化一下。
 ```python
 #!/usr/bin/evn python3
 
