@@ -66,7 +66,7 @@ Record lock, heap no 1 PHYSICAL RECORD: n_fields 1; compact format; info bits 0
 ---
 
 
-## 解析方案
+## 解决方案
 如果你在业务上还真遇到了上面的场景，然而 MySQL 死锁了。你又不想让它死锁，那怎么办呢？MySQL 不是把上锁的步骤拆开了吗？那我们把它合起来。
 
 `select ... for update` 直接对行上排他锁，通过它我们可以把分开的两步合起来，`on duplicate key update` 当遇到冲突时会直接更新，不会再报错；结合这两大神器代码可以改成如下的形式。
@@ -82,7 +82,7 @@ Record lock, heap no 1 PHYSICAL RECORD: n_fields 1; compact format; info bits 0
 
 ---
 
-## 解决方案的副作用
+## 副作用
 
 由于 `select for update` 是排他锁，所以并发性上会有些问题，建议与`read-committed`一起使用。
 
