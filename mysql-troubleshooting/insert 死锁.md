@@ -7,7 +7,7 @@ google-adsense
 
 ---
 
-## insert 死锁
+## 复现 insert 死锁
 按理论一步一步的复现 insert 死锁的场景。
 
 |**会话一**|**会话二**|**会话三**|
@@ -20,7 +20,6 @@ google-adsense
 
 ---
 
-## 死锁日志如下
 `show engine innodb status` 输出中关于死锁的信息如下。
 
 ```sql
