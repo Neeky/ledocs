@@ -9,7 +9,7 @@ google-adsense
 
 
 ## 安装
-[Markdown pip 主面](https://pypi.org/project/Markdown/) 可以通过 pip 直接安装。 
+[Markdown](https://pypi.org/project/Markdown/) 可以通过 pip 直接安装。 
 ```bash
 pip3 install Markdown
 
