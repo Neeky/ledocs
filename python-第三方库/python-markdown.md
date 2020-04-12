@@ -1,5 +1,5 @@
 ## 介绍
-`python-markdown` 这个库可以把 markdown 转化为 html ，用起来方便，有许多的第三方拓展，再者自己加一些自己的功能也非常方便。
+`python-markdown` 这个库可以把 markdown 转化为 html ，拥有用起来方便、第三方拓展多、自定义性高等优点。
 
 ![markdown](static/2020-15/markdown.png)
 
@@ -9,7 +9,7 @@ google-adsense
 
 
 ## 安装
-[Markdown](https://pypi.org/project/Markdown/) 可以通过 pip 直接安装。 
+直接通过 pip 来安装 [Markdown](https://pypi.org/project/Markdown/)。 
 ```bash
 pip3 install Markdown
 
@@ -27,7 +27,7 @@ You should consider upgrading via the 'pip install --upgrade pip' command.
 ---
 
 ## 基本用法
-转化一段简单的 markdown 字符串为例子。
+用转化一段简单的 markdown 字符串为例。
 
 ```python
 import markdown
@@ -41,12 +41,12 @@ python3 main.py
 '<h2>hell-world</h2>'
 ```
 
-API 就是这么的人性化，只要把要转化的 markdown 字符串传递给 `markdown.markdown`函数就行。
+API 就是这么的人性化，只要把 markdown 字符串传递给 `markdown.markdown`函数就行。
 
 ---
 
 ## 生态
-markdown 这个库的生态比较好，一些常用的功能它自己就解决，实在解决不了的还有官方拓展可用。通常来说对于“段落”，“标题”这些简单的元素我们用不到拓展，但是对于“目录”，“代码块” 这些复杂点的东西就要用到拓展才能实现解析了，下面会介绍一些常用的拓展和编写自己的拓展。
+markdown 这个库的生态比较好，一些常用的功能它自己就解决，实在解决不了的还有官方拓展可用。通常来说对于“段落”，“标题”这些简单的元素我们用不到拓展，但是对于“目录”，“代码块” 这些复杂点的东西就要用到拓展才能实现解析，下面会介绍一些常用的拓展和编写自己的拓展。
 
 google-adsense
 
@@ -147,6 +147,8 @@ python3 main.py
 </tbody>
 </table>
 ```
+
+google-adsense
 
 ---
 
