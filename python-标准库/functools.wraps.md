@@ -89,6 +89,8 @@ WARNING:root:complete print_message
 ```
 可以看到我们在不改 `print_message` 函数代码的情况下，为 `print_message` 加上了运行时的日志输出功能。
 
+google-adsense
+
 ---
 
 
