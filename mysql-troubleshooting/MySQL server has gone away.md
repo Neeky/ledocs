@@ -1,10 +1,10 @@
 ## 背景
-在访问 [www.sqlpy.com](https://sqlpy.com) 报 http 500 错误，难道 sqlpy.com 宕机了？不太相信会宕机；我又刷新了一下浏览器发现一切正常。
+在访问 [www.sqlpy.com](https://sqlpy.com) 报 http 500 错误，难道 sqlpy.com 宕机了？我不太相信它会宕机；我又刷新了一下浏览器发现一切正常。
 
 ---
 
-## 查询后台 django 日志
-查询后台的 django 日志，看到如下内容。
+## 查看 django 日志
+django 的日志中记录着如下内容。
 ```sql
 2020-04-15 14:09:36,886 ERROR django.request Internal Server Error: /markets/golds/
 Traceback (most recent call last):
@@ -27,7 +27,7 @@ google-adsense
 
 ---
 
-## 日志分析
+## 分析 django 日志
 从日志中可以看出是 `MySQL server has gone away` 这个错误，也就是应用程序到 MySQL-Server 的连接被断开了。这个错误有两个常见的场景。
 
 第一个场景是查询的数据太多越过了最大包的限制。
@@ -94,5 +94,10 @@ mysql> show global variables like 'wait_timeout';
 1 row in set (0.00 sec)
 ```
 
+---
+
+
+## 总结
+通常这种情况只要调大 `max_allowed_packet` 和 `wait_timeout` 都能解决。[官方文档](https://dev.mysql.com/doc/refman/8.0/en/gone-away.html)。
 
 ---
