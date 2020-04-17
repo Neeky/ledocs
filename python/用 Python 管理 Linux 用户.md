@@ -98,6 +98,8 @@ In [2]: lus.uid_gid("root")
 Out[2]: (0, 0) 
 ```
 
+---
+
 ## 查询用户和用户组是否存在
 ```python
 In [1]: from dbma.usermanage import LinuxUsers as lus 
