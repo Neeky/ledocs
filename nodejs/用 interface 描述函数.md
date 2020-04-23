@@ -1,4 +1,4 @@
-## typescrip 支持用接口来描述函数
+## typescript 支持用接口来描述函数
 用接口描述一个打印函数来举例子。
 ```ts
 interface PrintStr {
