@@ -1,5 +1,5 @@
 ## 概要
-MySQL-8.0.20 版本加上了一个压缩 `binlog` 的特性，于是在测试环境上做了下实验看它的压缩比有多少，环境的物理信息如下。
+MySQL-8.0.20 版本加上了一个压缩 `binlog` 的特性，接受了太多磁盘告警洗礼的我，感觉看到了那么一点点希望。于是在测试环境上试了下，测试环境的信息如下。
 
 |**IP**|**CPU**|**MEM**|**SSD**|**角色**|
 |------|-------|-------|-------|-------|
@@ -11,7 +11,7 @@ MySQL-8.0.20 版本加上了一个压缩 `binlog` 的特性，于是在测试环
 
 ## 测试方法
 
-用 sysbench 分别向 MySQL-8.0.19 和 MySQL-8.0.20 写入 1kw 行数据，观察 binlog 文件的总大小。为了简化数据库的安装操作，在这里使用 `dbm-agent` 来完成 MySQL 的自动化安装。
+用 sysbench 分别向 MySQL-8.0.19 和 MySQL-8.0.20 写入 1kw 行数据，观察 binlog 文件的总大小。为了简化数据库的安装操作，在这里使用 [dbm-agent](#https://github.com/Neeky/dbm-agent) 来完成 MySQL 的自动化安装。
 
 ---
 
@@ -52,13 +52,13 @@ sysbench --mysql-host=192.168.100.10  --mysql-port=3306 --mysql-user=sysbench \
 
 
 ## 8.0.20 场景
-第一步：安装 MySQL-8.0.19
+第一步：安装 MySQL-8.0.20
 ```bash
 dbma-cli-single-instance --port=3308 --max-mem=40960 \
 --pkg=mysql-8.0.20-linux-glibc2.12-x86_64.tar.xz install
 ```
 
-当 dbm-agent 检测到是 MySQL-8.0.20 以上版本时就会自动的为它加上 binlog 压缩相关的参数。
+当 dbm-agent 检测到 MySQL 的版本大于等于 8.0.20 ，它就会开启 binlog 压缩相关的配置。
 
 ```sql
 mysql> show global variables like 'binlog_transaction_compression%';
@@ -66,7 +66,7 @@ mysql> show global variables like 'binlog_transaction_compression%';
 | Variable_name                             | Value |
 +-------------------------------------------+-------+
 | binlog_transaction_compression            | ON    |
-| binlog_transaction_compression_level_zstd | 3     |
+| binlog_transaction_compression_level_zstd | 3     | 
 +-------------------------------------------+-------+
 2 rows in set (0.01 sec)
 ```
@@ -99,7 +99,7 @@ sysbench --mysql-host=192.168.100.10  --mysql-port=3308 --mysql-user=sysbench \
 ---
 
 ## 结论
-默认情况(不调整压缩级别)下 MySQ-8.0.20 的 binlog 日志压缩比有 2.23。
+在开启 binlog 压缩，并保持默认压缩级别(binlog_transaction_compression_level_zstd=3) 的下 MySQ-8.0.20 的 binlog 日志压缩比有 2.23；也就是说可以节约一半多的空间。
 
 |**\\**|**MySQL-8.0.19**|**MySQL-8.0.20**|**压缩比**|
 |-----|----------------|-----------------|---------|
