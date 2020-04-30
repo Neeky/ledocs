@@ -16,14 +16,14 @@ MySQL-8.0.20 版本加上了一个压缩 `binlog` 的特性，接受了太多磁
 ---
 
 ## 8.0.19 场景
-第一步：安装 MySQL-8.0.19
+第一步：安装 MySQL-8.0.19。
 ```bash
 dbma-cli-single-instance --port=3306 --max-mem=40960 \
 --pkg=mysql-8.0.19-linux-glibc2.12-x86_64.tar.xz install
 ```
 ---
 
-第二步：创建压力测试用户
+第二步：创建压力测试用户。
 ```sql
 create user sysbench@'%' identified by 'sysbench';
 create database tempdb;
@@ -31,7 +31,7 @@ grant all on tempdb.* to sysbench@'%';
 ```
 ---
 
-第三步：导入数据
+第三步：导入数据。
 ```bash
 sysbench --mysql-host=192.168.100.10  --mysql-port=3306 --mysql-user=sysbench \
 --mysql-password=sysbench --tables=100 --table_size=100000 --mysql-db=tempdb \
@@ -52,7 +52,7 @@ sysbench --mysql-host=192.168.100.10  --mysql-port=3306 --mysql-user=sysbench \
 
 
 ## 8.0.20 场景
-第一步：安装 MySQL-8.0.20
+第一步：安装 MySQL-8.0.20。
 ```bash
 dbma-cli-single-instance --port=3308 --max-mem=40960 \
 --pkg=mysql-8.0.20-linux-glibc2.12-x86_64.tar.xz install
@@ -73,7 +73,7 @@ mysql> show global variables like 'binlog_transaction_compression%';
 
 ---
 
-第二步：创建压力测试用户
+第二步：创建压力测试用户。
 ```sql
 create user sysbench@'%' identified by 'sysbench';
 create database tempdb;
@@ -81,7 +81,7 @@ grant all on tempdb.* to sysbench@'%';
 ```
 ---
 
-第三步：导入数据
+第三步：导入数据。
 ```bash
 sysbench --mysql-host=192.168.100.10  --mysql-port=3308 --mysql-user=sysbench \
 --mysql-password=sysbench --tables=100 --table_size=100000 --mysql-db=tempdb \
