@@ -8,6 +8,7 @@
 
 根据之前的经验这套测试环境在 120 个表 + 240 个并发的情况，可以取得一个性能上的极大值；所以在这里就直接使用这个作为测试压力。
 
+![compress](static/2020-18/compress-001.png)
 
 ---
 
@@ -42,6 +43,8 @@ sysbench --mysql-host=192.168.100.10  --mysql-port=3306 --mysql-user=sysbench \
 资源消耗情况。
 
 ![binlog-002](static/2020-18/binlog-002.png)
+
+google-adsense
 
 ---
 
@@ -86,7 +89,10 @@ sysbench --mysql-host=192.168.100.10  --mysql-port=3306 --mysql-user=sysbench \
 
 ![binlog-004](static/2020-18/binlog-004.png)
 
+google-adsense
+
 ---
+
 ## 8.0.20 + binlog 不压缩
 第一步: 关闭 binlog 压缩功能。
 ```sql
