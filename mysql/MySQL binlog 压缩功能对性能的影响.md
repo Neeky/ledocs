@@ -135,7 +135,7 @@ sysbench --mysql-host=192.168.100.10  --mysql-port=3306 --mysql-user=sysbench \
 |**delete(qps)** |5.7k            |5.6k                | 5.7k                |
 |**insert(qps)** |5.7k            |5.6k                | 5.7k                |
 |**udate(qps)**  |11.5k           |11.3k               | 11.5k               |
-|**cpu(qps)**    |87%             |89%                 | 88%                 |
+|**cpu(sys+user)**    |87%             |89%                 | 88%                 |
 
 
 ---
