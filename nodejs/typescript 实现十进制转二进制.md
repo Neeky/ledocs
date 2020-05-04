@@ -1,6 +1,10 @@
-## 栈
+## 概要
 用 typescript 实现一个二进制转二进制的算法。
 
+---
+
+## 栈
+定义一个栈，用于保存余数。
 ```ts
 class Stack {
     // 定义一个栈对象，用于保存余数。
@@ -49,7 +53,11 @@ class Stack {
     }
 }
 
+```
 
+## 进制转换
+基于栈实现进制转换函数。
+```ts
 function decimalToBinary(decimal: number) {
     //  把十进制数转化为二进制数
     let binary_string = '';
@@ -82,8 +90,5 @@ console.log(decimalToBinary(-3)); // -11
 console.log(decimalToBinary(-4)); // -100
 console.log(decimalToBinary(0));  // 0
 console.log(decimalToBinary(7));  // +111
-
-
-
-
 ```
+
