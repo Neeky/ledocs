@@ -16,6 +16,8 @@ Scan through string looking for a match to the pattern, returning a match object
 
 看样子只要在正则表达式前加上一个`^`，就能让 re.search 完成 re.match 的功能了；但是问题在于标准库的开发者单独出一个 re.match 是不是有专门做了一些起优化呢？
 
+google-adsense
+
 ---
 
 ## 性能比较
