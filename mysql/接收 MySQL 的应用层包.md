@@ -10,7 +10,7 @@ MySQL 数据库的客户端与服务端通信使用的是 MySQL协议(classic)�
 ---
 
 ## 接收 MySQL 的应用层包
-当 TCP 连接完成之后 MySQL-Server 会发送一个数据库包到 client ，client 用这个包来完成应用层的握手；下面代码以接收这个包为例子，来演示 Python 如何处理。
+当 TCP 连接完成之后 MySQL-Server 会发送一个应用层数据包到 client ，client 用这个包来完成应用层的握手；下面看用 Python 如何处理。
 ```python
 #!/usr/bin/env python3
 
