@@ -63,7 +63,7 @@ def read_payload(host, port):
         packet_view = packet_view[4:]
 
         while rest:
-            read = sock.recv_into(packet, rest)
+            read = sock.recv_into(packet_view, rest)
             if read == 0 and rest > 0:
                 # 如果在读取的过程中 TCP 连接被断开就会造成 read == 0
                 raise Exception(errno=2013)
@@ -85,8 +85,8 @@ if __name__ == "__main__":
 ```bash
 python3 client.py 
 
-2020-05-06 15:37:52,895 - root - MainThread - INFO - [(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('172.16.192.100', 3306))]
-2020-05-06 15:37:52,896 - root - MainThread - INFO - bytearray(b'\n8.0.20\x00#\x00\x00\x00u8b\x1364[\x11\x00\xff\xff\xff\x02\x00\xff\xc7\x15\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x05\x15\x11lsJ\x04\x1d\rr\x7fK\x00caching_sha2_password\x00\x00\x00\x00\x00')
+2020-05-06 16:18:57,118 - root - MainThread - INFO - [(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('172.16.192.100', 3306))]
+2020-05-06 16:18:57,120 - root - MainThread - INFO - bytearray(b'J\x00\x00\x00\n8.0.20\x00\x9f\x00\x00\x00\x0c\x08!\n&P=`\x00\xff\xff\xff\x02\x00\xff\xc7\x15\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x03SFe^\x14rV}ZNG\x00caching_sha2_password\x00')
 ```
 
 google-adsense
