@@ -12,7 +12,10 @@ ERROR 1786 (HY000): Statement violates GTID consistency: CREATE TABLE ... SELECT
 
 第一部分是 `create table xxx`。
 ```sql
-create table t_s as select * from t;
+CREATE TABLE `t_s` (
+  `id` int NOT NULL DEFAULT '0',
+  `x` int DEFAULT NULL
+)
 ```
 第二部分是 `insert into xxx`。
 ```sql
@@ -67,28 +70,49 @@ mysql> select * from t_s;
 ```
 binlog 的内容如下。
 ```sql
-SET TIMESTAMP=1588864298/*!*/;
+SET TIMESTAMP=1588865633/*!*/;
+/*!80013 SET @@session.sql_require_primary_key=0*//*!*/;
+CREATE TABLE `t_s` (
+  `id` int NOT NULL DEFAULT '0',
+  `x` int DEFAULT NULL
+)
+/*!*/;
+# at 574
+#200507 23:33:53 server id 2099  end_log_pos 649        Anonymous_GTID  last_committed=2        sequence_number=3        rbr_only=yes    original_committed_timestamp=1588865633066696   immediate_commit_timestamp=1588865633066696      transaction_length=284
+/*!50718 SET TRANSACTION ISOLATION LEVEL READ COMMITTED*//*!*/;
+# original_commit_timestamp=1588865633066696 (2020-05-07 23:33:53.066696 CST)
+# immediate_commit_timestamp=1588865633066696 (2020-05-07 23:33:53.066696 CST)
+/*!80001 SET @@session.original_commit_timestamp=1588865633066696*//*!*/;
+/*!80014 SET @@session.original_server_version=80020*//*!*/;
+/*!80014 SET @@session.immediate_server_version=80020*//*!*/;
+SET @@SESSION.GTID_NEXT= 'ANONYMOUS'/*!*/;
+# at 649
+#200507 23:33:53 server id 2099  end_log_pos 858        Transaction_Payload             payload_size=180 compression_type=ZSTD   uncompressed_size=243
+# Start of compressed events!
+# at 858
+#200507 23:33:53 server id 2099  end_log_pos 858        Query   thread_id=77    exec_time=0     error_code=0
+SET TIMESTAMP=1588865633/*!*/;
 BEGIN
 /*!*/;
-# at 655
-#200507 23:11:38 server id 2099  end_log_pos 655        Rows_query
+# at 858
+#200507 23:33:53 server id 2099  end_log_pos 858        Rows_query
 # create table t_s as select * from t
-# at 655
-#200507 23:11:38 server id 2099  end_log_pos 655        Table_map: `tempdb`.`t_s` mapped to number 114
-# at 655
-#200507 23:11:38 server id 2099  end_log_pos 655        Write_rows: table id 114 flags: STMT_END_F
+# at 858
+#200507 23:33:53 server id 2099  end_log_pos 858        Table_map: `tempdb`.`t_s` mapped to number 157
+# at 858
+#200507 23:33:53 server id 2099  end_log_pos 858        Write_rows: table id 157 flags: STMT_END_F
 
 BINLOG '
-KiW0Xh0zCAAANwAAAAAAAACAACNjcmVhdGUgdGFibGUgdF9zIGFzIHNlbGVjdCAqIGZyb20gdA==
-KiW0XhMzCAAAMAAAAAAAAAAAAHIAAAAAAAEABnRlbXBkYgADdF9zAAIDAwACAQEA
-KiW0Xh4zCAAAKAAAAAAAAAAAAHIAAAAAAAEAAgAC/wABAAAAZAAAAA==
+YSq0Xh0zCAAANwAAAAAAAACAACNjcmVhdGUgdGFibGUgdF9zIGFzIHNlbGVjdCAqIGZyb20gdA==
+YSq0XhMzCAAAMAAAAAAAAAAAAJ0AAAAAAAEABnRlbXBkYgADdF9zAAIDAwACAQEA
+YSq0Xh4zCAAAKAAAAAAAAAAAAJ0AAAAAAAEAAgAC/wABAAAAZAAAAA==
 '/*!*/;
 ### INSERT INTO `tempdb`.`t_s`
 ### SET
 ###   @1=1 /* INT meta=0 nullable=0 is_null=0 */
 ###   @2=100 /* INT meta=0 nullable=1 is_null=0 */
-# at 655
-#200507 23:11:38 server id 2099  end_log_pos 655        Xid = 67
+# at 858
+#200507 23:33:53 server id 2099  end_log_pos 858        Xid = 4682
 COMMIT/*!*/;
 # End of compressed events!
 SET @@SESSION.GTID_NEXT= 'AUTOMATIC' /* added by mysqlbinlog */ /*!*/;
