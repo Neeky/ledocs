@@ -26,6 +26,9 @@ mysql> show create table teacher;
 +---------+------------------------------------------------------------------------------------------+
 1 row in set (0.00 sec)
 ```
+
+google-adsense
+
 ---
 
 由于有主键约束的存在插入 null 值会报错。
@@ -104,6 +107,8 @@ mysql> select * from teacher;
 mysql> insert into student(teacher_id,name) values(2,'jerry');                                   
 ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`tempdb`.`student`, CONSTRAINT `student_ibfk_1` FOREIGN KEY (`teacher_id`) REFERENCES `teacher` (`id`))
 ```
+
+google-adsense
 
 ---
 
