@@ -1,11 +1,11 @@
-## Generated Columns 要解决的问题
-`Generated Columns` 就是在平衡存储开销和计算开销；假设有一个表用来保存学生的成绩，当学生查询自己在年级的排名时，应用程序从数据库中读取出各科的成绩，求和，再由高到低排序。
+## Generated Columns 
+一句话 `Generated Columns` 就是在平衡存储开销和计算开销；举个例子，假设有一个表用来保存学生的成绩，当学生查询自己在年级的排名时，应用程序从数据库中读取出各科的成绩，求和，再由高到低排序。
 
-每一次查询都要求和，那为什么不把求先保存起来呢？这样后面要用到的时候就直接取。之前这个工作要在应用程序来实现，现在 MySQL 提供了原生的支持。
+每一次查询都要求和，那为什么不把求得的和保存起来呢？这样后面要用到的时候就直接取。之前这个工作要在应用程序来实现，现在 MySQL 提供了原生的支持。
 
 ---
 
-## 古老手法
+## 以前的做法
 在生成列还没有出来之前上面介绍的功能可以这样实现。
 ```sql
 create table scores(
@@ -15,6 +15,11 @@ create table scores(
     physis decimal(4,1) not null comment '物理'
 );
 
+-- 插入数据
+mysql> insert into scores(student_name,math,physis) values('tom',120,100);
+Query OK, 1 row affected (0.01 sec)
+
+-- 查询时计算
 mysql> select student_name,math,physis,sum(math+physis) as total_score from scores group by id;  
 +--------------+-------+--------+-------------+
 | student_name | math  | physis | total_score |
@@ -23,6 +28,33 @@ mysql> select student_name,math,physis,sum(math+physis) as total_score from scor
 +--------------+-------+--------+-------------+
 1 row in set (0.00 sec)
 ```
+如果想做到查询时不计算和，那么写入时就要多做点事。
+```sql
+create table scores(
+    id int not null auto_increment primary key,
+    student_name varchar(32) not null comment '学生名',
+    math decimal(4,1) not null comment '数学',
+    physis decimal(4,1) not null comment '物理',
+    total_score decimal(6,1)
+);
+Query OK, 0 rows affected (0.01 sec)
+
+-- 插入数据时要写入和
+mysql> insert into scores(student_name,math,physis,total_score) values('tom',120,100,120+100);
+Query OK, 1 row affected (0.00 sec)
+
+-- 可以直接取
+mysql> select * from scores;                                                                     
++----+--------------+-------+--------+-------------+
+| id | student_name | math  | physis | total_score |
++----+--------------+-------+--------+-------------+
+|  1 | tom          | 120.0 |  100.0 |       220.0 |
++----+--------------+-------+--------+-------------+
+1 row in set (0.00 sec)
+
+```
+
+可以看到没有“银弹”两这方法都有各自的成本，并且应用层的成本也比较高。
 
 google-adsense
 
