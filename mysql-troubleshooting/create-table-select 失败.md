@@ -1,5 +1,5 @@
 ## 背景
-有同事想复制表`t`的结构和数据到一个新的表上去，但是它执行 SQL 失败。
+有同事想复制表`t`的结构和数据到一个新的表上去，但是他执行 SQL 失败。
 ```sql
 mysql> create table t_s as select * from t;                                                      
 ERROR 1786 (HY000): Statement violates GTID consistency: CREATE TABLE ... SELECT.
