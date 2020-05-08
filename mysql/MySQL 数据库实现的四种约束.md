@@ -67,7 +67,7 @@ ERROR 1062 (23000): Duplicate entry '1' for key 'teacher.PRIMARY'
 ---
 
 ## 外建约束
-外键用于在一张表中引用另一张表中的数据，如学生表有一个班主什么任的列，而这个列应该引用的`teacher`表中的行。
+外键用于在一张表中引用另一张表中的数据，如学生表有一个班主任的列，这个列引用着`teacher`表中的行。
 ```sql
 create table student(
     id int not null auto_increment primary key,
