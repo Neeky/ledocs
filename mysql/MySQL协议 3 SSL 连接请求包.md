@@ -5,6 +5,7 @@
 
 ## SSL Connection Request 包格式
 SSL 连接请求包还是比较简单的，payload 部分的格式如下。
+
 |**长度(字节)**|**内容**|
 |-------------|---------|
 |4            | 客户端的特性列表(capability flags)|
