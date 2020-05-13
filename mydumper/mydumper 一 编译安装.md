@@ -1,8 +1,7 @@
 ## 背景
-虽然我一直是 `mysqlbackup` 的粉丝，但是 `mysqlbackup` 要钱是实打实的。`xtrabackup`也不是不能用，但是对于一个用过 `mysqlbackup`的人来说就不会再爱了。
+虽然我一直是 `mysqlbackup` 的粉丝，但是 mysqlbackup 要钱是实打实的。`xtrabackup`也不是不能用，但是对于一个用过 mysqlbackup 的人来说就不会再爱了。
 
-`mydumper`也是一个支持多线程一致性备份的工具，与 mysqlbackup 不同它是逻辑备份，并且不要钱。我最喜欢的自然还是 mysqlbackup ，但是 `mydumper` 也不错。
-
+`mydumper`也是一个支持多线程一致性备份的工具，与 mysqlbackup 不同它是逻辑备份，并且不要钱。
 
 ---
 
@@ -32,6 +31,8 @@ wget https://codeload.github.com/maxbube/mydumper/tar.gz/v0.9.5
 tar -xvf mydumper-0.9.5.tar.gz -C ./
 cd mydumper-0.9.5
 ```
+
+google-adsense
 
 ---
 
