@@ -1,7 +1,5 @@
 ## mydumper
-前面的文章介绍了如何源码安装`mydumper`。mydumper 安装完成之后得到两个可执行命令 1、`mydumper` 用于备份 2、`myloader` 用于还原。
-
-下面我将通过开启 general-log 的方法来观察 mydumper 的整个备份过程中做了一些什么操作。
+[前面的文章](/blogs/932052756)介绍了如何源码安装 `mydumper` 下面我将通过开启 general-log 的方法来观察 mydumper 的整个备份过程中做了一些什么操作。
 
 ---
 
@@ -89,7 +87,7 @@ google-adsense
 ---
 
 
-## mydumper 备份过程分析
+## mydumper 备份过程
 第一步：主线程连接到数据库获取全局读锁
 ```sql
 FLUSH TABLES WITH READ LOCK; -- 这行 SQL 执行完成之后主线程所有会话就持有了所有表的读锁，使得其它会话的写入将被阻塞。
@@ -182,3 +180,5 @@ Application Options:
   -v, --verbose               Verbosity of output, 0 = silent, 1 = errors, 2 = warnings, 3 = info, default 2
   --defaults-file             Use a specific defaults file
 ```
+
+---
