@@ -1,5 +1,5 @@
 ## hashlib
-标准库 `hashlib` 专门用于生成数据指纹，其中包含有许多种不同的算法；因为他们提供的接口是一致的，这里就只有最常用的 sha256 来讲解。
+标准库 `hashlib` 专门用于生成数据指纹，hashlib 库中包含多种算法，但不同算法提供的接口是一致的都是构造函数、update 函数、digest 函数。出于上面的原因这里只以 sha256 做例子。
 
 ---
 
@@ -13,7 +13,7 @@ In [2]: sha256_instance = hashlib.sha256()
 In [3]: sha256_instance.digest()                                                
 Out[3]: b"\xe3\xb0\xc4B\x98\xfc\x1c\x14\x9a\xfb\xf4\xc8\x99o\xb9$'\xaeA\xe4d\x9b\x93L\xa4\x95\x99\x1bxR\xb8U"
 ```
-以上代码创建了一个空(b'')字节的 sha256 指纹提取对象，也可以直接把要计算指纹值的数据传递进构造函数。
+以上代码创建了一个空(b'')字节的 sha256 指纹提取对象，也可以直接把要计算指纹值的数据，传递给构造函数。
 ```python
 In [1]: import hashlib                                                          
 
