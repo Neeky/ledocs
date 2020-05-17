@@ -24,7 +24,7 @@ Out[3]: b"\xe3\xb0\xc4B\x98\xfc\x1c\x14\x9a\xfb\xf4\xc8\x99o\xb9$'\xaeA\xe4d\x9b
 ```
 在实际的编程中我们会使用第二种方式，这样方便一些。
 
-googl-adsense
+google-adsense
 
 ---
 
