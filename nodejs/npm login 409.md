@@ -16,7 +16,7 @@ npm ERR!     /Users/jianglexing/.npm/_logs/2020-05-18T08_06_09_184Z-debug.log
 ---
 
 
-## 解析方案
+## 解决方案
 npm 的配置文件在 `~/.npmrc` 所以我要把 registry 的指向改回去(官方)。
 ```
 //registry=https://registry.npm.taobao.org
