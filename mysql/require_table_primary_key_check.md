@@ -57,6 +57,8 @@ worker 线程的错误信息是这样的。
 Worker 1 failed executing transaction '08b17c86-9bde-11ea-ae1f-000c29e0ca28:2' at master log mysql-bin.000002, end_log_pos 517; Error 'Unable to create or change a table without a primary key, when the system variable 'sql_require_primary_key' is set. Add a primary key to the table or unset this variable to avoid this message. Note that tables without a primary key can cause performance problems in row-based replication, so please consult your DBA before changing this setting.' on query. Default database: 'tempdb'. Query: 'create table t(x int)' 
 ```
 
+---
+
 ## 结论
 当 slave 开启 `require_table_primary_key_check` 后，如果遇到了要处理的表没有主键就会直接报错，停止复制。
 
