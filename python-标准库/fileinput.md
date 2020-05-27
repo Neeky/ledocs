@@ -1,5 +1,5 @@
 ## 问题
-linux 的一个哲学就是把一个又一个矮小精悍的命令组合起来写成特定的工作，例如存在一个名单文件 names.txt 要对其中的行进行去重可以这样做。
+linux 的哲学就是把一个又一个短小精悍的命令组合起来用以完成工作，例如存在一个名单文件 names.txt 要对其中的行进行去重可以这样做。
 ```bash
 # 文件内容如下
 cat names.txt 
@@ -21,7 +21,7 @@ tom
 
 
 ## 原理
-不管是从管道读取还是从文件重定向的数据流读取，本质上都是读的 `sys.stdin` 这个文件、下面程序会直接把读到的内容输出。
+不管是从管道读取还是从文件重定向的数据流读取，本质上都是读的 `sys.stdin` 、下面程序会直接把读到的内容输出。
 ```python
 #!/usr/bin/env python3
 
@@ -30,9 +30,9 @@ import sys
 print(sys.stdin.read())
 
 ```
-可以看到三行代码就搞定了，事实上最关键的就只有一行 `print(sys.stdin.read())`，下面看一下运行效果。
+可以看到三行代码就搞定了，事实上最关键的就只有一行 `print(sys.stdin.read())`，运行效果如下。
 ```bash
- cat names.txt | python3 main.py 
+cat names.txt | python3 main.py 
 tom
 tim
 tom
@@ -43,7 +43,7 @@ jerry
 ---
 
 ## 用最原始的方法实现去重
-我们已经知道背后的原理了，先写一个去重程序来练一下手。虽然 Python 并不提倡什么都自己写，这里还是先过一个苦日子，后面才会知道幸福的生活来之不易。
+我们已经知道背后的原理了，先写一个去重程序练下手。虽然 Python 并不提倡什么都自己写，这里还是先过一下苦日子，后面才会知道 import 有多爽。
 ```python
 #!/usr/bin/env python3
 
@@ -82,11 +82,12 @@ tim
 jerry
 tom
 ```
+目的是实现了就是代码有点长。
 
 ---
 
 ## 最 pythonic 的写法
-上面的写法不太像 Python 的风格，真正的 Python 风格是一个 import 就完成了一大半的工作。我直说了吧 标准库 `fileinput` 就是用来做这个的。
+上面的写法不太像 Python 的风格，真正的 Python 风格是一个 import 就完成了一大半的工作。我直说了吧 标准库 `fileinput` 就是用来做这个的。这下整个世界都干净了。
 ```python
 #!/usr/bin/env python3
 
