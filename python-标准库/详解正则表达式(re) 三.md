@@ -67,7 +67,7 @@ Out[8]: '2020-05-27'
 In [9]: re.search(date_pattern,s).group(2)                                      
 Out[9]: '08:00'
 ```
-现在我不想用下标了，那么我只要在表达式中定义好组名就行，语法像这样 `(?<group_name>)` 。
+现在我不想用下标了，那么我只要在表达式中定义好组名就行，语法像这样 `(?P<group_name>)` 。
 
 ```python
 In [13]: date_pattern = r"(?P<start_at>\d{4}-\d{2}-\d{2})\S*\s*(?P<zone>\d{2}:\d{2})$"                                         
