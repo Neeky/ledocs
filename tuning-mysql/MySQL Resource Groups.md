@@ -25,7 +25,7 @@ mysql> SELECT * FROM INFORMATION_SCHEMA.RESOURCE_GROUPS ;
 ---
 
 
-## create resource group
+## 创建资源组
 `create resource group` 语句可以用来创建资源组，在使用之前先确认一下主机核心数量。
 ```bash
 cat /proc/cpuinfo  | grep processor
@@ -52,13 +52,15 @@ mysql> SELECT * FROM INFORMATION_SCHEMA.RESOURCE_GROUPS ;
 +---------------------+---------------------+------------------------+--------------------+-----------------+
 3 rows in set (0.01 sec)
 ```
-如果在你的环境上看到 batch 组的 THREAD_PRIORITY == 0 应该是你的 MySQL 还没用启用 Group Resource 功能，后面会讲到这个功能怎么启用。
+如果在你的环境上看到 batch 组的 THREAD_PRIORITY == 0 应该是你的 MySQL 还没用启用 Resource Groups 功能，后面会讲到这个功能怎么启用。
 
 google-adsense
 
 ---
 
 ## 使用资源组
+总的来讲使用资源组有三种方式、分别是分当前线程(连接)指定、为特定的 SQL 语句指定、为其它线程指定。
+
 1、指定当前连接使用哪个资源组。
 ```sql
 mysql> set resource group batch;                                                                 
@@ -120,8 +122,8 @@ mysql> select thread_id,resource_group from performance_schema.threads where pro
 ---
 
 
-## drop resource group 
-删除资源组。
+## 删除资源组
+删除资源组使用的语句是 `drop resource group`。
 ```sql
 mysql> drop resource group batch;
 ERROR 3656 (HY000): Resource group batch is busy.
@@ -150,7 +152,7 @@ mysql> select thread_id,resource_group from performance_schema.threads where res
 +-----------+----------------+
 1 row in set (0.00 sec)
 ```
-可以看到 kill 了也没有用，当连接重新连接之后还是去了那个组，看来解铃还须系铃人，用 set resource group 把线程移走吧。
+kill 了也没有用，当连接重新连接之后还是去了那个组，看来解铃还须系铃人，用 set resource group 把线程移走吧。
 ```sql
 mysql> set resource group USR_default for 49;
 Query OK, 0 rows affected (0.00 sec)
