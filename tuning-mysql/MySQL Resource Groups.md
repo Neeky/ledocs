@@ -165,7 +165,7 @@ Query OK, 0 rows affected (0.00 sec)
 
 
 ## 启用资源组
-想启用资源组要配置 systemd 的参数并从启 MySQL，关键参数就下面这一个。
+想启用资源组要配置 systemd 的参数 `AmbientCapabilities=CAP_SYS_NICE`。
 ```ini
 [Service]
 AmbientCapabilities=CAP_SYS_NICE
