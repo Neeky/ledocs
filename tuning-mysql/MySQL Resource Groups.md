@@ -194,3 +194,9 @@ PrivateTmp=false
 配置好之后重新启动 MySQL 就行了。
 
 ---
+
+## 官方文档
+
+更多 [Resource Group](https://dev.mysql.com/doc/refman/8.0/en/resource-groups.html) 的信息还是看官方文档 。
+
+---
