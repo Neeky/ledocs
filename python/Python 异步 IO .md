@@ -2,7 +2,7 @@
 ## Python 异步 IO
 通常用异步 IO 用于服务器端的网络编程，但是磁盘文件的操作也是可以进行异步 IO 的，本文将会介绍怎么用 Python 进入异步读写文件。
 
-要想开启异步 IO 的功能，我们就不能使用高层次的 `open` 函数，而是要使用更加低层的 `os.open` 函数。
+本文将使用 `os.open` 这个低层的 API 来实现异步 IO 的功能。
 
 ![sqlpy.com](static/2020-22/python-sqlpy.jpg)
 
@@ -10,7 +10,7 @@
 
 
 ## open 与 os.open 的关系
-`open` 函数是对 `os.open` 函数的封装，如果想使用异步 IO 就只能通过 os.open 来实现。
+`open` 函数是对 `os.open` 函数的封装，如果想使用异步 IO 直接使用 os.open 就行。
 
 1、用 open 实现向一个文件写入四字节数据。
 ```python
@@ -58,6 +58,8 @@ ll /tmp/async.log
 md5 /tmp/async.log 
 MD5 (/tmp/async.log) = cb08ca4a7bb5f9683c19133a84872ca7
 ```
+
+google-adsense
 
 ---
 
@@ -165,5 +167,18 @@ writing 1.0 .
 complete write .
 ```
 
+---
+
+3、验证两种方式结果是一样的。
+```bash
+-rwxr-xr-x  1 jianglexing  wheel  4294967296  6  4 11:26 async.log
+-rw-r--r--  1 jianglexing  wheel  4294967296  6  4 10:56 sync.log
+
+md5 async.log 
+MD5 (async.log) = 6a628b7c7be4251d724217b78b52ef6c
+
+md5 sync.log 
+MD5 (sync.log)  = 6a628b7c7be4251d724217b78b52ef6c
+```
 
 ---
