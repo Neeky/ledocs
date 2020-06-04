@@ -1,10 +1,10 @@
 
-![sqlpy.com](static/2020-22/python-sqlpy.jpg)
-
 ## Python 异步 IO
 通常用异步 IO 用于服务器端的网络编程，但是磁盘文件的操作也是可以进行异步 IO 的，本文将会介绍怎么用 Python 进入异步读写文件。
 
 要想开启异步 IO 的功能，我们就不能使用高层次的 `open` 函数，而是要使用更加低层的 `os.open` 函数。
+
+![sqlpy.com](static/2020-22/python-sqlpy.jpg)
 
 ---
 
