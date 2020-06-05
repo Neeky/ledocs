@@ -1,5 +1,5 @@
 ## ChainMap 要解决的问题
-现在我们有两个字典 users 和 customers ，两个字典的格式是一样的，其中的建代表姓名，值代表年龄。
+现在我们有两个字典 users 和 customers ，两个字典的格式是一样的，其中的键代表姓名，值代表年龄。
 ```python
     users = {
         'tim': 20,
@@ -12,14 +12,14 @@
     }
 
 ```
-现在我们要以这两个字典为数据库，根据姓名查询年龄。如果给定的姓名没有被记录就返回 None，有记录就返回对应的年龄，如果两个字典都有记录就以 customers 的为准，也就是说 customers 的内容有更高的优先级。
+现在我们以这两个字典为数据库，根据姓名查询年龄。如果给定的姓名没有被记录就返回 None，有记录就返回对应的年龄，如果两个字典都有记录就以 customers 的为准，也就是说在 customers 中的内容有更高的优先级。
 
 ![sqlpy.com](static/2020-22/python-sqlpy.jpg)
 
 ---
 
 ## 解决方案一
-逻辑并不复杂，我现在用一个函数来解决一下。
+逻辑并不复杂，用一个函数就能解决。
 ```python
 #!/usr/bin/env python3
 
@@ -60,7 +60,7 @@ tom's age 19
 tim's age 200
 ```
 
-可以看到 `query_proxy` 的实现是按次序检查各个字典，所以谁有更高的优先级，在调用时它就应该放在更前面的位置。
+可以看到 `query_proxy` 的实现是按次序检查各个字典，所以谁有更高的优先级，在调用时它就应该放在更前面的位置，这也就是调用时 customers 在 users 之前的原因。
 
 google-adsense
 
@@ -109,8 +109,8 @@ tim's age 200
 
 ---
 
-## ChainMap 可写
-如果单单只解决上面的这个问题，那么 ChainMap 就没有存在的必要了，ChainMap 能讲标准库的一个重要原因是它是一个可以写的字典。
+## ChainMap 的高级用法
+如果单单只解决上面的这个问题，那么 ChainMap 就没有存在的必要了，ChainMap 能进标准库的一个重要原因在于它可以写。
 ```python
 #!/usr/bin/env python3
 
@@ -146,9 +146,12 @@ customers {'bob': 100, 'tim': 200, 'neeky': 10000}
 
 可以看到新的键 `neeky` 已经被写进去了。
 
+google-adsense
+
 ---
 
-除了更新键，更新的数据源还可以是一个新的字典。
+除了更新键，更新的数据源还可以是一个新的字典，这个时候我们要使用到 `new_child` 方法。
+
 ```python
 #!/usr/bin/env python3
 
@@ -181,8 +184,6 @@ if __name__ == "__main__":
 python3 main.py 
 ChainMap({'neeky': 10000}, {'bob': 100, 'tim': 200}, {'tim': 20, 'tom': 19})
 ```
-
-google-adsense
 
 ---
 
