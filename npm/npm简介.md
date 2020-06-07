@@ -13,6 +13,8 @@ Email: (this IS public) neeky@live.com
 Logged in as neeky on http://registry.npmjs.org/.
 ```
 
+google-adsense
+
 ---
 
 ## 从零开始发布一个 npm 模块
