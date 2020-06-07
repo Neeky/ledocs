@@ -57,11 +57,11 @@ npm init -y --scope=@neeky
     },
     "homepage": "https://github.com/Neeky/nee-scope-package#readme"
 ```
-name 指定的包的名字是多少，其中neeky是域名(与用户名保持一致，注意域名前面还要加上一个 @)。
+name 指定包的名字，其中neeky是域名(与用户名保持一致，注意域名前面还要加上一个 @) `/`后面的是包名。
 
-main 指定当模块被其它程序加载时执行哪个文件，这里使用了默认的 index.js (我们这个时候还并没有创建这个文件，所以之后要补上)
+main 指定当包(模块)被其它程序加载时执行哪个文件，这里使用了默认的 index.js (我们这个时候还并没有创建这个文件，所以之后要补上)
 
-version 表现模块的版本号。
+version 表现包的版本号。
 
 ---
 
