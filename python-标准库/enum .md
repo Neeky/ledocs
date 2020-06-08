@@ -289,7 +289,7 @@ Colors.blue|green|red
 
 
 ## enum 模块下各个类的继承关系
-enum 模块下的继承关系如下，其中`EnumMeta` 是元类，`int` 是就是系统提供 int 。
+enum 模块下各个类的继承关系如下，其中`EnumMeta` 是元类，`int` 是就是系统提供 int 。
 
 ![enum-uml](static/2020-22/enmu-codes-uml.jpg)
 
