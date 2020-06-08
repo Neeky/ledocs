@@ -141,25 +141,25 @@ mysql> select @@read_rnd_buffer_size;
 +------------------------+
 1 row in set (0.00 sec)
 
-mysql> explain select i0,i3 from t where i0 between 1 and  20;                                   
+mysql> explain select i0,i3 from t where i0 between 1 and  12;
 +----+-------------+-------+------------+------+---------------+------+---------+------+---------+----------+-------------+
 | id | select_type | table | partitions | type | possible_keys | key  | key_len | ref  | rows    | filtered | Extra       |
 +----+-------------+-------+------------+------+---------------+------+---------+------+---------+----------+-------------+
-|  1 | SIMPLE      | t     | NULL       | ALL  | idx_i0        | NULL | NULL    | NULL | 1121902 |    41.11 | Using where |
+|  1 | SIMPLE      | t     | NULL       | ALL  | idx_i0        | NULL | NULL    | NULL | 1121902 |    23.57 | Using where |
 +----+-------------+-------+------------+------+---------------+------+---------+------+---------+----------+-------------+
 1 row in set, 1 warning (0.00 sec)
 ```
 
 放大 read_rnd_buffer_size 让 MySQL 有足够的资源用于 MRR 。
 ```sql
-mysql> set read_rnd_buffer_size = 32 * 1024 * 1024;                                              
+mysql> set read_rnd_buffer_size = 32 * 1024 * 1024; 
 Query OK, 0 rows affected (0.00 sec)
 
-mysql> explain select i0,i3 from t where i0 between 1 and  10;
+mysql> explain select i0,i3 from t where i0 between 1 and  12;
 +----+-------------+-------+------------+-------+---------------+--------+---------+------+--------+----------+----------------------------------+
 | id | select_type | table | partitions | type  | possible_keys | key    | key_len | ref  | rows   | filtered | Extra                            |
 +----+-------------+-------+------------+-------+---------------+--------+---------+------+--------+----------+----------------------------------+
-|  1 | SIMPLE      | t     | NULL       | range | idx_i0        | idx_i0 | 4       | NULL | 218492 |   100.00 | Using index condition; Using MRR |
+|  1 | SIMPLE      | t     | NULL       | range | idx_i0        | idx_i0 | 4       | NULL | 264436 |   100.00 | Using index condition; Using MRR |
 +----+-------------+-------+------------+-------+---------------+--------+---------+------+--------+----------+----------------------------------+
 1 row in set, 1 warning (0.00 sec)
 ``` 
