@@ -32,7 +32,7 @@ python3 main.py
 ---
 
 ## Counter 的学习方法
-总的来看就包含两个部分 1、怎么创建出 Counter 对象，2、使用好 Counter 对象的方法。
+学习使用 Counter,总的来看就是两个部分 1、怎么创建出 Counter 对象，2、使用好 Counter 对象的方法。
 
 google-adsense
 
