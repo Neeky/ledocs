@@ -98,7 +98,7 @@ google-adsense
 ---
 
 
-## update 方法
+## 使用 update 方法
 Counter 对象的 update 方法用于更新计数器，这可能是最常用的一个方法了。
 ```python
 #!/usr/bin/env python3
@@ -136,7 +136,7 @@ Counter({'bob': 11, 'tom': 3, 'jerry': 2})
 
 ---
 
-## most_common 方法
+## 使用 most_common 方法
 
 most_common 用于返回出现次数最多的那 n 项。
 ```python
