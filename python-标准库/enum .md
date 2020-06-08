@@ -1,5 +1,8 @@
 ## Python 自定义枚举存在的问题
+![sqlpy.com](static/2020-22/sqlpy-0608-a.jpg)
+
 要实现自定义枚举比较简单，通常的做法就是定义几个全局的“只读”变量。
+
 ```python
 #!/usr/bin/env python3
 
@@ -54,8 +57,6 @@ RED 100
 GREEN 200
 BLUE 400
 ```
-
-![sqlpy.com](static/2020-22/python-sqlpy.jpg)
 
 google-adsense
 
@@ -285,6 +286,15 @@ Colors.blue|green|red
 ```
 
 ---
+
+
+## enum 模块下各个类的继承关系
+enum 模块下的继承关系如下，其中`EnumMeta` 是元类，`int` 是就是系统提供 int 。
+
+![enum-uml](static/2020-22/enmu-codes-uml.jpg)
+
+---
+
 
 ## 官方文档
 [enum 官方文档](https://docs.python.org/3.8/library/enum.html) 。
