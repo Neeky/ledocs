@@ -3,6 +3,8 @@
 
 之前的解决方案是在业务压力低估时(通常是凌晨之后)执行导出报表的工作，MySQL 8 提出了新的解决方案资源组(Resource Groups)。
 
+![sqlpy](static/2020-22/sqlpy-0609-c.jpg)
+
 ---
 
 ## Resource Groups 原理
