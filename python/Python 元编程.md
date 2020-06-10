@@ -1,6 +1,8 @@
 ## Python 元编程要解决的问题
 python 元编程目的是为了让代码更加的灵活，实现的手段就是用代码生成代码，用代码修改代码。
 
+![sqlpy-meta-class](static/2020-22/sqlpy-0610-meta.jpg)
+
 ---
 
 ## 元编程的基础
