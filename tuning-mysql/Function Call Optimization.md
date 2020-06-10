@@ -30,6 +30,8 @@ mysql> explain select * from t where id = rand() + 1;
 ```
 可以看到执行计划中的 type 为 ALL ，说明 MySQL 要做全表扫描才能找到目录数据。
 
+![sqlpy](static/2020-22/sqlpy-0610-a.jpg)
+
 ---
 
 ## 问题分析与解决
