@@ -1,5 +1,9 @@
 ## 安装 mysqlclient 的时候报错
+
+![sqlpy-ssl](static/2020-22/sqlpy-0610-ssl.jpg)
+
 今天把 Mac 上的 Python3.7 升级到 Python-3.8 在安装 mysqlclient 的时候报错了。
+
 ```bash
 pip3 install mysqlclient 
 
@@ -42,6 +46,8 @@ Running setup.py install for mysqlclient ... error
 ERROR: Command errored out with exit status 1: /Library/Frameworks/Python.framework/Versions/3.8/bin/python3.8 -u -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'/private/var/folders/w_/_457k4h53vq0p_1k1nzf5cfm0000gn/T/pip-install-zhca7a0b/mysqlclient/setup.py'"'"'; __file__='"'"'/private/var/folders/w_/_457k4h53vq0p_1k1nzf5cfm0000gn/T/pip-install-zhca7a0b/mysqlclient/setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' install --record /private/var/folders/w_/_457k4h53vq0p_1k1nzf5cfm0000gn/T/pip-record-l6bzbnij/install-record.txt --single-version-externally-managed --compile Check the logs for full command output.
 
 ```
+
+google-adsense
 
 ---
 
@@ -87,6 +93,7 @@ Pruned 0 symbolic links and 2 directories from /usr/local
 export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
 ```
+
 ---
 
 ## 验证
