@@ -1,4 +1,7 @@
 ## 问题
+
+![sqlpy](static/2020-22/sqlpy-0610-fileinput.jpg)
+
 linux 的哲学就是把一个又一个短小精悍的命令组合起来用以完成工作，例如存在一个名单文件 names.txt 要对其中的行进行去重可以这样做。
 ```bash
 # 文件内容如下
@@ -85,6 +88,8 @@ jerry
 tom
 ```
 目的是实现了就是代码有点长。
+
+google-adsense
 
 ---
 
