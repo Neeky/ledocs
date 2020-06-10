@@ -7,7 +7,7 @@
 
 ---
 
-## 表结构和数据
+## 实验环境
 实验环境的表结构和数据如下。
 ```sql
 mysql> show create table t;                                                                      
