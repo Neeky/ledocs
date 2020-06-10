@@ -1,7 +1,7 @@
 ## re
 `正则表达式` 可以用形式化的语法描述文本匹配模式，模式又被正则表达式引擎编译成指令；执行指令并提供一个字符串作为输入，就可以知道给定的输入有没有与模式相匹配。 文字比较空洞还是直接看例子吧。
 
-![re](static/2020-15/re-001.png)
+![sqlpy](static/2020-24/sqlpy-re-01.jpg)
 
 google-adsense
 
@@ -99,6 +99,8 @@ function fun_a execute 10000 times cost 0.013822078704833984
 function fun_b execute 10000 times cost 0.006231784820556641
 ```
 可以看到提前编译要比即时编译快 100% 。
+
+google-adsense
 
 ---
 
