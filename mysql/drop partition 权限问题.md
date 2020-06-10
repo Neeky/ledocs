@@ -1,7 +1,7 @@
 ## 背景
 近期有人向我咨询，`alter table xxx drop partition xxx` 要有什么权限才行，一时还真没答上来，不过我可以做实验把它搞出来。先说结论吧，要想成功执行这条语句我们需要 `alter`和 `drop` 权限。
 
-![sqlpy drop partition](static/2020-22/sqlpy-0610-partition.jpg)
+![sqlpy-drop-partition](static/2020-22/sqlpy-0610-partition.jpg)
 
 ---
 
