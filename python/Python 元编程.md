@@ -256,7 +256,7 @@ sqlpy.Person.say_hello My name is tom .
 
 ---
 
-## 总结
+## 第二阶段总结
 元类算是 Python 的黑魔法，是通往代码定义代码的大门。
 
 ---
