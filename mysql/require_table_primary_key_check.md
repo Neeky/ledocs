@@ -6,6 +6,8 @@ MySQL-8.0.20 给 `change master to` 加了一个新参数，`require_table_prima
 |172.16.192.100| master |MySQL-8.0.20|
 |172.16.192.88 | salve  |MySQL-8.0.20|
 
+![sqlpy](static/2020-24/sqlpy-primary.jpg)
+
 
 ---
 
