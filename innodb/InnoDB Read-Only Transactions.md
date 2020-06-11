@@ -3,6 +3,8 @@ innodb 表中的每一行数据都有一个隐藏字段 `trx_id` ,这个字段�
 
 也就是说为一个只读事务分配事务 id 是在做无用功。 开启只读事务就可以让 innodb 跳过这一步。
 
+![sqlpy](static/2020-24/sqlpy-readonly-trx.jpg)
+
 ---
 
 ## 使用只读事务
