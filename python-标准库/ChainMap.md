@@ -14,7 +14,7 @@
 ```
 现在我们以这两个字典为数据库，根据姓名查询年龄。如果给定的姓名没有被记录就返回 None，有记录就返回对应的年龄，如果两个字典都有记录就以 customers 的为准，也就是说在 customers 中的内容有更高的优先级。
 
-![sqlpy.com](static/2020-22/python-sqlpy.jpg)
+![sqlpy.com](static/2020-25/sqlpy-chain-map.jpg)
 
 ---
 

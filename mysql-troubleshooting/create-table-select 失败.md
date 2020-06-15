@@ -5,6 +5,8 @@ mysql> create table t_s as select * from t;
 ERROR 1786 (HY000): Statement violates GTID consistency: CREATE TABLE ... SELECT.
 ```
 
+![sqlpy](static/2020-25/sqlpy-create-table.jpg)
+
 ---
 
 ## 原因分析

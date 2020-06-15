@@ -1,6 +1,7 @@
 ## 背景
 之前对 mysql-connector-python 这个驱动程序中 `MySQLCachingSHA2PasswordAuthPlugin` 类的实现一直不太理解，今天终于明白了；希望可以讲清理。
 
+![sqlpy](static/2020-25/sqlpy-caching-sh2.jpg)
 
 ---
 
