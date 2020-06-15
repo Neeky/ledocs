@@ -1,7 +1,7 @@
 ## 背景
-在解决 C10k 、C100k 问题时，不可避免的要用到 epoll、poll、select 三者之一。然而 linux 上最好的是 epoll ，这个在 mac 上又没有，所以 mac 退而求其次使用 poll，对于 windows 而言只能用最 low 的 select 了。
+在解决 C10k 、C100k 问题时，不可避免的要用到 epoll、poll、select 三者之一。然而 linux 上最好的是 epoll ，这个在 mac 上又没有，所以我在 mac 退而求其次使用 poll，但对于 windows 而言又只能用 select 。
 
-如果我在代码里写死了用 epoll 那么它是可以在 linux 上运行起来了，但是它在我的开发机(mac)上运行不起来，为了一次性的解决这种平台相关的不兼容，我决定写一个抽象层。一方面它可以隔离 epoll、poll、select 这三个物理上的实现，它还要做到对“反应器模式”编程友好。
+如果我在代码里写死了用 epoll 那么它是可以在 linux 上运行起来了，但是它在我的开发机(mac)上运行不起来，为了一次性的解决这种平台相关的不兼容，我决定写一个抽象层。一方面它可以隔离 epoll、poll、select 这三个物理上的实现，另一方面它又对“反应器模式”友好。
 
 ![sqlpy](static/2020-25/sqlpy-epoll-select.jpg)
 
