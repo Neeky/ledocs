@@ -4,6 +4,9 @@
 python3 setup sdist
 pip3 install dist/mysql-connector-python-8.0.20.tar.gz
 ```
+
+![sqlpy](static/2020-25/sqlpy-singl-version.jpg)
+
 报错信息如下。
 ```bash
 ERROR: Command errored out with exit status 1:
