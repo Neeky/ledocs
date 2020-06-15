@@ -448,4 +448,28 @@ Out[3]: 10
 In [4]: sock.recv(1024)                                                        
 Out[4]: b'2020-06-15 15:34:33.899256'
 ```
+google-adsense
+
+---
+
+## 安装 posix-pythonic-tool
+为了下一次写代码的时候可以直接使用 Uloop，我把它发布到了 PyPI，要使用 Uloop 要先安装。
+```bash
+pip3 install posix-pythonic-tool
+```
+---
+
+## 使用 posix-pythonic-tool
+完成安装后导入就能使用了。
+```python
+In [1]: from ppt.eventloop import UEvent,Uloop                                  
+
+In [2]:
+```
+---
+
+## 源代码
+
+源代码托管在 gitub [posix-pythonic-tool](https://github.com/Neeky/posix-pythonic-tool) 。
+
 ---
