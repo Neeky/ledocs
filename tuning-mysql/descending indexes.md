@@ -76,6 +76,8 @@ mysql> explain select i0,i3 from t where i0=1 order by i0,i1 desc;
 11200 rows in set (0.82 sec)
 ```
 
+---
+
 ## 结论
 在当前的场景下使用倒排索引可以把耗时从 2.29s 降到 0.82s ，大致提升 3 倍性能。
 
