@@ -16,6 +16,8 @@ Out[5]: b'\x01\x00'
 ```
 可以看到字节的大小端 `<` 对结果没有影响。
 
+![sqlpy](static/2020-25/sqlpy-struct.jpg)
+
 ---
 
 

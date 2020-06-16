@@ -3,6 +3,8 @@
 
 再不刻意指定的情况下密码在网络中传输的是密文，并且加密方式也迭代了好向次了。随着 MySQL-8.0.x 的到来，默认加密算法也从之前的 `mysql_native_password` 更新到现在的 `caching_sha2_password`。
 
+![sqlpy](static/2020-25/sqlpy-password.jpg)
+
 ---
 
 
@@ -10,6 +12,8 @@
 当 MySQL-Client 建立到 MySQL-Server 的 TCP 连接之后，MySQL-Server 会向 MySQL-Client 发送一个叫 `Initial Handshake Packet` 的数据包，这个数据包里面包含了一个叫 `auth-data` 的数据。
 
 现在可以把 auth-data 看成是一个完全随机的字节串，客户端在加密密码时就会用这个串做为“盐值”。
+
+google-adsense
 
 ---
 
