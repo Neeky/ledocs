@@ -38,7 +38,7 @@ google-adsense
 
 ---
 
-## 第三步 安装
+## 第三步 编译安装
 
 ```bash
 # 3.1 cmake .
