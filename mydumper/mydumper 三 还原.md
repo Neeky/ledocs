@@ -1,5 +1,8 @@
 ## myloader 
 myloader 是 `mydumper` 软件包中用于还原数据库的命令，整体上看这个命令的选项不多，用起来应该不难。
+
+![sqlpy](static/2020-25/sqlpy-mydumper-03.jpg)
+
 ```bash
 myloader --help                                                             
 Usage:

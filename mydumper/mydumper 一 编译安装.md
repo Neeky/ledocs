@@ -1,7 +1,9 @@
 ## 背景
-虽然我一直是 `mysqlbackup` 的粉丝，但是 mysqlbackup 要钱是实打实的。`xtrabackup`也不是不能用，但是对于一个用过 mysqlbackup 的人来说就不会再爱了。
+我的上一份工作是做 MySQL 技术支持的，我和服务对象多数是银行、电信；他们的系统都求一个稳字。在数据库备份这一块多用的是 mysqlbackup 这个企业级的备份工具。
 
-`mydumper`也是一个支持多线程一致性备份的工具，与 mysqlbackup 不同它是逻辑备份，并且不要钱。
+多年的相处 mysqlbackup 给了一个非常好的映像，慢慢的就从路人转成了粉丝。然而多数据互联网公司在数据库上都不想花钱，更不要说把钱花在一个备份软件上了，如果遇到了这种情况 mydumper 是一个不错的选择。
+
+![sqlpy](static/2020-25/sqlpy-mydumper-01.jpg)
 
 ---
 
@@ -162,3 +164,5 @@ GTHREAD2_LIBRARIES (ADVANCED)
 -- Configuring incomplete, errors occurred!
 See also "/tmp/mydumper-0.9.5/CMakeFiles/CMakeOutput.log".
 ```
+
+---

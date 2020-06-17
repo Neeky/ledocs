@@ -1,6 +1,8 @@
 ## mydumper
 [前面的文章](/blogs/932052756)介绍了如何源码安装 `mydumper` 下面我将通过开启 general-log 的方法来观察 mydumper 的整个备份过程中做了一些什么操作。
 
+![sqlpy](static/2020-25/sqlpy-mydumper-02.jpg)
+
 ---
 
 ## 准备工作
