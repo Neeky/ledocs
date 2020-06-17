@@ -32,6 +32,8 @@ Wrote to /Users/neekyjiang/gits/electrons/emp/package.json:
 }
 ```
 
+google-adsense
+
 ---
 
 ## 第二步 安装 electron
@@ -97,6 +99,8 @@ function createWindow() {
 
 app.whenReady().then(createWindow)
 ```
+
+google-adsense
 
 ---
 
