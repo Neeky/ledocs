@@ -6,7 +6,7 @@ OrderedDict 能记键的写入次序，它结合了列表，和字典两大数�
 ---
 
 ## 创建 OrderedDict
-和其它的字典类型一行，直接调用类就可以创建 OrderedDict 的实例。
+和其它的字典类型一样，直接调用类就可以创建 OrderedDict 的实例。
 ```python
 In [1]: from collections import OrderedDict                                     
 
@@ -29,7 +29,7 @@ google-adsense
 
 
 ## popitem 方法
-popitem 方法的原型如下 `popitem(last:int=True) -> object`，默认返回最后写入到字典的键值对，如果想返回最先写入的值，传入参数 False 就行。
+popitem 方法的原型如下 `popitem(last:bool=True) -> object`，默认返回最后写入到字典的键值对，如果想返回最先写入的值，传入参数 False 就行。
 ```python
 In [1]: from collections import OrderedDict                                     
 
