@@ -1,5 +1,5 @@
 ## OrderedDict 要解决的问题
-OrderedDict 能记键的写入次序，它结合了列表，和字典两大数据结构的优势，基于它可以方便的实现一些算法，如 LRU 缓存淘汰算法。
+OrderedDict 能记键的写入次序，它结合了列表和字典两大数据结构的优势，基于它可以方便的实现一些算法，如 LRU 缓存淘汰算法。
 
 ![sqlpy](static/2020-26/sqlpy-orderedict.jpg)
 
