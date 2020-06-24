@@ -22,22 +22,20 @@ percona.repo 配置文件的内容如下。
 name = Percona Original release/x86_64 YUM repository
 baseurl = http://mirrors.tencent.com/percona/yum/release/$releasever/RPMS/x86_64
 enabled = 1
-gpgcheck = 1
-gpgkey = file:///etc/pki/rpm-gpg/PERCONA-PACKAGING-KEY
+gpgcheck = 0
 
 [percona-release-noarch]
 name = Percona Original release/noarch YUM repository
 baseurl = http://mirrors.tencent.com/percona/yum/release/$releasever/RPMS/noarch
 enabled = 1
-gpgcheck = 1
-gpgkey = file:///etc/pki/rpm-gpg/PERCONA-PACKAGING-KEY
+gpgcheck = 0
 
 [percona-release-sources]
 name = Percona Original release/sources YUM repository
 baseurl = http://mirrors.tencent.com/percona/yum/release/$releasever/SRPMS
 enabled = 0
-gpgcheck = 1
-gpgkey = file:///etc/pki/rpm-gpg/PERCONA-PACKAGING-KEY
+gpgcheck = 0
+
 ```
 
 google-adsense
