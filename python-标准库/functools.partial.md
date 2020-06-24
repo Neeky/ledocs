@@ -14,7 +14,7 @@ def partial(func, /, *args, **keywords):
 
 那 `functools.partial` 的目的是什么呢？答案是代码重用，是面向过程编程的代码重用。
 
-![partial](static/2020-15/partial.png)
+![partial](static/2020-26/sqlpy-partial.jpg)
 
 google-adsense
 

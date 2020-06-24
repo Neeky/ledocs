@@ -1,6 +1,8 @@
 ## hashlib
 标准库 `hashlib` 专门用于生成数据指纹，hashlib 库中包含多种算法，但不同算法提供的接口是一致的都是构造函数、update 函数、digest 函数。出于上面的原因这里只以 sha256 做例子。
 
+![sqlpy](static/2020-26/sqlpy-hashlib.jpg)
+
 ---
 
 ## 创建加密算法对象

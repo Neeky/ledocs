@@ -1,7 +1,7 @@
 ## 概要
 在前文 [null 导致空结果](/blogs/119435262) 中我们提到了 SQL 语言的三值逻辑，这次我将更加深入的讨论一下 null 的坑。
 
-![exists-null](static/2020-14/exists-null.png)
+![exists-null](static/2020-26/sqlpy-null.jpg)
 
 google-adsense
 

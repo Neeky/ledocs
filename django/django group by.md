@@ -1,7 +1,7 @@
 ## 概要
 如何用 django 自带的 ORM 框架来完成 SQL 中的 group by 操作呢？
 
-![group-by](static/2020-15/group-by.png)
+![group-by](static/2020-26/sqlpy-group-by.jpg)
 
 google-adsense
 

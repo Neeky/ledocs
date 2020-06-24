@@ -1,6 +1,8 @@
 ## 概要
 标准库 `struct` 用于把 Python 的数据打包成 C 语言的结构体。常见的应用场景是解析 TCP 字节流、解析二进制文件。
 
+![sqlpy](static/2020-26/sqlpy-struct-02.jpg)
+
 ---
 
 ## struct.pack 打包
