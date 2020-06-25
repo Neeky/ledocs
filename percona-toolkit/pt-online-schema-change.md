@@ -1,5 +1,5 @@
 ## pt-online-schema-change 要解决的问题
-DDL 语句的执行时间直接与表中的数据量正相关，我经过过一个 `alter table` 下去半个多小时才完成的；如果这个数据库有从库那么从库，那么从库的 SQL 线程也要执行这么久才行，这就会造成主从延时，应用程序在从库上查询不到最新的数据。虽然 MySQL-8.0 已经好多了，但是对于 MySQL-5.6 & MySQL-5.7 来说，如果表比较大使用 pt-online-schema-change 还是有必要的。
+DDL 语句的执行时间直接与表中的数据量正相关，我经历过一个 `alter table` 下去半个多小时才完成的；如果这个数据库有从库，那么从库的 SQL 线程也要执行这么久才行，造成主库上 alter 语句之后的 DML 语句半小时内容都得不到执行，这也就是人们常说的主从延时；应用程序在从库上查询不到最新的数据。虽然 MySQL-8.0 已经好多了，但是对于 MySQL-5.6 & MySQL-5.7 来说，如果表比较大使用 pt-online-schema-change 还是有必要的。
 
 ![sqlpy](static/2020-26/sqlpy-pt-osc.jpg)
 
