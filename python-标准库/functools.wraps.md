@@ -1,7 +1,7 @@
 ## functools.wraps
 要讲清楚 `functools.wraps` 需要一大段的内容，但是要概括 `functools.wraps` 的作用只要一句 “更新包装函数的元数据，使它看起来像被包装函数”。 下面会通过给函数加上日志为例子来一步步讲清楚 `functools.wraps`。
 
-![wrap](static/2020-16/wrap.png)
+![wrap](static/2020-26/sqlpy-function-warps.jpg)
 
 google-adsense
 

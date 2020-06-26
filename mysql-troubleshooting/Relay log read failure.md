@@ -4,7 +4,7 @@
 Last_Error: Relay log read failure: Could not parse relay log event entry. The possible reasons are: the master's binary log is corrupted (you can check this by running 'mysqlbinlog' on the binary log), the slave's relay log is corrupted (you can check this by running 'mysqlbinlog' on the relay log), a network problem, or a bug in the master's or slave's MySQL code. If you want to check the master's binary log or slave's relay log, you will be able to know their names by issuing 'SHOW SLAVE STATUS' on this slave.
 Skip_Counter: 0
 ```
-![Relay-log-read-failure](static/2020-12/Relay-log-read-failure.png)
+![Relay-log-read-failure](static/2020-26/sqlpy-relay-log.jpg)
 
 google-adsense
 
