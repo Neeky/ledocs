@@ -1,7 +1,7 @@
 ## 概要
 如何得到 django 对数据库的操作日志呢？
 
-![django-log](static/2020-15/django-log.png)
+![django-log](static/2020-27/django-log.jpg)
 
 google-adsense
 

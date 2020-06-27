@@ -28,7 +28,7 @@ python3 main.py
 ERROR:root:division by zero
 ```
 
-![traceback](static/2020-15/traceback.png)
+![traceback](static/2020-27/sqlpy-traceback.jpg)
 
 google-adsense
 

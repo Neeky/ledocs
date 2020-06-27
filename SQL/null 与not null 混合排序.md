@@ -21,7 +21,7 @@ select name,age from person order by age;
 +-------+------+
 3 rows in set (0.00 sec)
 ```
-![null-not-null](static/2020-14/null-not-null.png)
+![null-not-null](static/2020-27/null-not-null.jpg)
 
 google-adsense
 

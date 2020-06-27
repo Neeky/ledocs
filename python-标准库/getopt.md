@@ -15,7 +15,7 @@ getopt.gnu_getopt(args, shortopts, longopts=[])
 exception getopt.GetoptError
 ```
 
-![getopt](static/2020-17/getopt.png)
+![getopt](static/2020-27/sqlpy-getopt.jpg)
 
 ---
 

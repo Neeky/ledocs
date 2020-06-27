@@ -1,7 +1,7 @@
 ## 概要
 在 django class-base-view 中常常会用到 `get_context_data(self, **kwargs)` 这个方法，今天就来看一下这方法是怎么实现的。
 
-![get-conext-data](static/2020-13/get-context-data.png)
+![get-conext-data](static/2020-27/get-context-data.jpg)
 
 google-adsense
 
