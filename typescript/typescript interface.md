@@ -32,6 +32,9 @@ sayHello(p);
 tsc index.ts && node index.js
 My name is Tom .
 ```
+
+google-adsense
+
 ---
 
 interface 是强约束的，对于没有出现在接口中的内容，如果出现在了对象里面会报错。
@@ -108,6 +111,8 @@ q = {
 }
 
 ```
+google-adsense
+
 ---
 
 ## 描述函数
