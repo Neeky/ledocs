@@ -1,5 +1,5 @@
 ## 背景
-最近和标准库的 datetime 打交道比较多，也就有了想看一下它的源码的冲动。
+最近和标准库的 datetime 打交道比较多，也就有了想看一下它源码的冲动。
 
 ![sqlpy](static/2020-27/sqlpy-datetime-source-code.jpg)
 
