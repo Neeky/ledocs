@@ -13,6 +13,7 @@ Constant-Folding 是 MySQL-8.0.x 的新功能，通过这个可以优化掉 MySQ
 ```sql
 create table t(x tinyint not null);
 
+-- 4194304 行数据
 insert into t(x) values(1),(2),(3);
 ```
 2、where 条件的范围比列所能表示的范围要大时，MySQL-5.7 的处理行为如下。
@@ -56,6 +57,7 @@ google-adsense
 ```sql
 create table t(x tinyint not null);
 
+-- 4194304 行数据
 insert into t(x) values(1),(2),(3);
 ```
 2、where 条件的范围比列所能表示的范围要大时，MySQL-8.0 的处理行为如下。
