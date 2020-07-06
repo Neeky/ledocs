@@ -36,6 +36,8 @@ urlpatterns = [
 
 ![sqlpy](static/2020-28/sqlpy-redirector-view.jpg)
 
+google-adsense
+
 ---
 
 ## 改进老版本
