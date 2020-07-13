@@ -73,6 +73,8 @@ Install the project...
 ```
 ---
 
+google-adsense
+
 可以看到整个编译安装的过程并没有报错，但是想运行 mydumper 是不行的，它会报错。
 ```bash
 mydumper --help                                                 
