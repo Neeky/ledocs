@@ -7,7 +7,6 @@ mydumper 命令来说只有满足 --regex 正则表式指定的库表才会被�
 
 ![sqlpy](static/2020-29/sqlpy-dumper-regex.jpg)
 
-
 ---
 
 ## 数据源
@@ -43,6 +42,8 @@ mysql> select tempdb.hello() as rows;
 1 row in set (0.00 sec)
 ```
 
+google-adsense
+
 ---
 
 ## 数据目标
@@ -64,6 +65,7 @@ mydumper -h 127.0.0.1 -u root -P 3306 --regex='^(?!mysql\.|information_schema\.|
 ```bash
 myloader -h 127.0.0.1 -P 3307 -u root -d /tmp/u3306/
 ```
+google-adsense
 
 ---
 
