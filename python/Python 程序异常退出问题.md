@@ -144,24 +144,24 @@ catch = catch_all
 ---
 
 ## 用法
-第一步 安装 ppc 。
+第一步 安装 python-posix-component 。
 ```bash
 
 pip3 install python-posix-component
 
 ```
-第二步 使用 ppc 解决这个问题。
+第二步 使用 python-posix-component 解决这个问题。
 ```python
 #!/usr/bin/env python3
 
-from ppc.exceptions import catch_all # 第一行，导入 ppc 
+from ppc.exceptions import catch_all # 第一步、导入 catch_all 装饰器 
 
 
 def exec_fun():
     return None > 0
 
 
-@catch_all("/tmp/err.log") # 装饰入口点函数
+@catch_all("/tmp/err.log") # 第二步、装饰入口点函数
 def main():
     """
     """
@@ -177,9 +177,9 @@ if __name__ == "__main__":
 
 ## github 与 pypi
 
-github 源码地址: https://github.com/Neeky/ppc
+github 源码地址: [https://github.com/Neeky/ppc](https://github.com/Neeky/ppc)
 
-pypi 包地址: https://pypi.org/project/python-posix-component/
+pypi 包地址: [https://pypi.org/project/python-posix-component](https://pypi.org/project/python-posix-component)
 
 ---
 
