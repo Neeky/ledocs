@@ -1,12 +1,12 @@
 ## 背景
-最近一直在看年 [typescript](https://www.typescriptlang.org/docs/home.html) 和 [javascript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide) 的官方文档，看到 typescript 说它可以定义枚举类型，可是 javascript 中并没有这个类型呀。想到 typescript 最终都要转成 javascript 才能运行，突然就非常的好奇，typescript 是怎么做的。
+最近一直在看 [typescript](https://www.typescriptlang.org/docs/home.html) 和 [javascript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide) 的官方文档，看到 typescript 说它可以定义枚举类型，可是 javascript 中并没有这个类型呀。想到 typescript 最终都要转成 javascript 才能运行，突然就非常的好奇，typescript 是怎么做的。
 
 ![sqlpy](static/2020-31/sqlpy-enums.jpg)
 
 ---
 
 ## typescript 如何实现枚举
-要想知道 typescript 是怎么做的，可以直接定义一个枚举然后看它被转换成怎样的 javascript 代码。
+要想知道 typescript 是怎么做的，一种比较直接的方法就是，定义一个枚举然后看它被转换成怎样的 javascript 代码。
 ```typescript
 enum Direction {
     Up,
