@@ -15,7 +15,7 @@ Found 1 error.
 ---
 
 ## 完整的ts代码
-实现一个 Person 类，它只有 name 属性，如果要返回 name 之外的属性都统一返回 100 。之前要实现这样的逻辑并不优雅，有 Proxy 之后好多了。
+实现一个 Person 类，它只有 name 属性，如果要访问 name 之外的属性都统一返回 100 。之前要实现这样的逻辑并不优雅，有 Proxy 之后好多了。
 
 ```ts
 class Person {
