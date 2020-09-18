@@ -2,7 +2,7 @@
 
 最近工作上的事情比较多，好长一段时间没有总结了。刚好昨天晚上 2 点多被告警电话打醒，上机器一看所有从库的复制都断了。
 
-![could not queue event from master](static/2020-37/1595.jpg)
+![sqlpy](static/2020-37/1595.jpg)
 
 ---
 
