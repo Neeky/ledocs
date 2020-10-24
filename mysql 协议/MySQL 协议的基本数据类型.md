@@ -104,11 +104,11 @@ python3 main.py
 
 |**类型名**|**详细**|
 |----|-----|
-|固定长度的字符串|string\<fix\>|
-|'\x00'结尾的字符串|string\<NUL\>|
-|可变长度的字符串|string\<var\>|
-|长度编码的字符串|string\<lenenc\>|
-|直至包尾的字符串|string\<EOF\>|
+|固定长度的字符串|string<fix\>|
+|'\x00'结尾的字符串|string<NUL\>|
+|可变长度的字符串|string<var\>|
+|长度编码的字符串|string<lenenc\>|
+|直至包尾的字符串|string<EOF\>|
 
 
 ---
