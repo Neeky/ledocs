@@ -30,12 +30,12 @@ b'\x01
 
 |**类型**|**打包代码**|
 |-------|-----------|
-| 1字节  | `struct.pack('b',1)`|
-| 2字节  | `struct.pack('h',1)`|
-| 3字节  | `struct.pack('i',1)[0:3]`|
-| 4字节  | `struct.pack('i',1)`|
-| 6字节  | `struct.pack('q',1)[0:6]`|
-| 8字节  | `struct.pack('q',1)`|
+| 1字节  | `struct.pack('<b',1)`|
+| 2字节  | `struct.pack('<h',1)`|
+| 3字节  | `struct.pack('<i',1)[0:3]`|
+| 4字节  | `struct.pack('<i',1)`|
+| 6字节  | `struct.pack('<q',1)[0:6]`|
+| 8字节  | `struct.pack('<q',1)`|
 |        |                     |
 
 google-adsense
