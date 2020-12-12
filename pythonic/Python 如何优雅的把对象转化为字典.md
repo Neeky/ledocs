@@ -79,7 +79,7 @@ d = dict(p)
 ---
 
 
-## 优雅的 API
+## 实现
 添加 `__iter__` 和 `__next__` 方法让对象支持迭代。
 ```python
 #!/usr/bin/evn python3
