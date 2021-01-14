@@ -1,5 +1,5 @@
 ## 背景
-对于一个被 python 宠爱坏了的程序员，突然下定决定要找回自己的 C++ ，并开始学习时哪哪都会觉得 Python 理人性。今天看到 C/C++ 中的字符串比较，还好我仔细的看了，要不然就是一个坑。
+对于一个被 python 宠爱坏了的程序员，突然下定决定要找回自己的 C++ ，并开始学习时哪哪都会觉得 Python 比较人性。今天看到 C/C++ 中的字符串比较，还好我仔细的看了，要不然就是一个坑。
 
 ![cpp-string](static/2021-01/cpp-string.jpg)
 
@@ -34,7 +34,7 @@ int main()
 ./main 
 not equal
 ```
-现代的编译器还是比较智能的针对上面这种明显的“不正常”，在其编译的时候是会有告警的。
+现代的编译器比较智能，针对上面这种明显的“不正常”，在其编译的时候是会有告警。
 ```bash
 /private/tmp/ups/main.cpp:11:13: warning: array comparison always evaluates to false [-Wtautological-compare]
     if (tom == tim ){ // 由于两个字符串的地址完全不一样，所以这里的 if 测试一定是 false.
