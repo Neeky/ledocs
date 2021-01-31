@@ -28,7 +28,7 @@ int main()
 ```
 编译一个 debug 版本
 ```bash
-# 编译
+#编译
 g++ -o main-debug -g main.cpp
 
 -rw-rw-r--. 1 jianglexing jianglexing   199 1月  31 14:59 main.cpp
@@ -37,7 +37,7 @@ g++ -o main-debug -g main.cpp
 ```
 如果要一步步的调试运行就交给 gdb 吧。
 ```bash
-# gdb 调试运行
+#gdb 调试运行
 gdb -s main-debug 
 For help, type "help".
 Type "apropos word" to search for commands related to "word"...
