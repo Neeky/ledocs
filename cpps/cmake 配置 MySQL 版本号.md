@@ -1,13 +1,13 @@
 ## 背景
 
-MySQL 源码包的“根目录”下保存着一个叫`MYSQL_VERSION` 的文本文件，它用来指定 MySQL 的版本号，以 MySQL-8.0.23 为例子，其内容如下。
+MySQL 源码包的“根目录”下保存着一个叫`MYSQL_VERSION` 的文本文件，它用来指定 MySQL 的版本号，以 MySQL-8.0.23 为例，其内容如下。
 ```python
 MYSQL_VERSION_MAJOR=8
 MYSQL_VERSION_MINOR=0
 MYSQL_VERSION_PATCH=22
 MYSQL_VERSION_EXTRA=
 ```
-MySQL 是直接读这个文件的内容来版本号嘛？虽然最终的效果和直接读文件差不多，不过事实上是在 cmake 来帮助下完成地。下面我们来看是怎么一步步进化成这样的。
+MySQL 是直接读这个文件的内容来指定版本号嘛？虽然最终的效果和直接读文件差不多，不过事实上是在 cmake 来帮助下完成地。下面我们我们来看它是怎么一步步进化成这样的。
 
 ![cmake-version](static/2021-01/cmake-version.jpg)
 
@@ -25,8 +25,8 @@ tree .
 ```c++
 #ifndef hello_world_h_
 
-#define HELLO_WORLD_VERSION_MAJOR 3
-#define HELLO_WORLD_VERSION_MINOR 4
+#define HELLO_WORLD_VERSION_MAJOR 1
+#define HELLO_WORLD_VERSION_MINOR 0
 
 #endif
 ```
