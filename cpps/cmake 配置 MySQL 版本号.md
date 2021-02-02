@@ -7,20 +7,22 @@ MYSQL_VERSION_MINOR=0
 MYSQL_VERSION_PATCH=23
 MYSQL_VERSION_EXTRA=
 ```
-MySQL 是直接读这个文件的内容来指定版本号嘛？虽然最终的效果和直接读文件差不多，不过事实上是在 cmake 来帮助下完成地。下面我们我们来看它是怎么一步步进化成这样的。
+MySQL 是直接读这个文件来指定版本号的嘛？虽然最终的效果和直接读文件差不多，不过事实上是在 cmake 的帮助下完成的。下面我们来看 cmake 做了什么。
 
 ![cmake-version](static/2021-01/cmake-version.jpg)
 
 ---
 
 ## 之前的实现方法
-之前的做法比较简单直接，就是把版本号声明成变量(通常是在头文件中声明)，下面以 hello-world 项目为例子。
+之前的做法比较简单粗暴，就是把版本号作为程序中的一个变量(通常是在头文件中声明)，下面以 hello-world 项目为例子。
 ```bash
 tree .
 .
 ├── hello-world.cpp # 源文件
 └── hello-world.h   # 头文件
 ```
+---
+
 `hello-world.h` 文件的内容如下。
 ```c++
 #ifndef hello_world_h_
@@ -30,6 +32,8 @@ tree .
 
 #endif
 ```
+---
+
 `hello-world.cpp` 文件的内容如下。
 ```c++
 #include<iostream>
