@@ -4,7 +4,7 @@ MySQL 源码包的“根目录”下保存着一个叫`MYSQL_VERSION` 的文本�
 ```python
 MYSQL_VERSION_MAJOR=8
 MYSQL_VERSION_MINOR=0
-MYSQL_VERSION_PATCH=22
+MYSQL_VERSION_PATCH=23
 MYSQL_VERSION_EXTRA=
 ```
 MySQL 是直接读这个文件的内容来指定版本号嘛？虽然最终的效果和直接读文件差不多，不过事实上是在 cmake 来帮助下完成地。下面我们我们来看它是怎么一步步进化成这样的。
