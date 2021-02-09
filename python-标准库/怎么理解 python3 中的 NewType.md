@@ -69,8 +69,9 @@ from typing import NewType
 from bs4 import BeautifulSoup
 
 Html = NewType("Html",str)
+Title = NewType("Title",str)
 
-def get_title(document:Html) -> str:
+def get_title(document:Html) -> Title:
     """
     返回 html 文档的 title 值
     """
