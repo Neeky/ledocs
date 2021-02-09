@@ -115,7 +115,7 @@ Out[7]: function
 In [8]: type(Html)
 Out[8]: function
 
-# 可以看到 Html 和 函数 f 的字节码是一样的。
+#可以看到 Html 和 函数 f 的字节码是一样的。
 In [9]: from dis import dis
 
 In [10]: dis(f)
