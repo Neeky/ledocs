@@ -18,7 +18,6 @@ transparent page compression 在节约磁盘空间上并没有什么卵用，有
 |normal|200000|29M|
 
 
-
 环境信息如下
 
 ```sql
