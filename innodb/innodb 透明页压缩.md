@@ -13,9 +13,10 @@ transparent page compression 在节约磁盘空间上并没有什么卵用，有
 
 |**类型**|**行数**|**表空间文件大小**|
 |-------|--------|----------------|
-|table-compression | 200000 | 22M|
-|transparent_page_compression| 200000 | 29M|
-|normal | 200000 | 29M|
+|table_compression | 200000 | 22M |
+|transparent_page_compression| 200000 | 29M |
+|normal | 200000 | 29M |
+
 
 环境信息如下
 
