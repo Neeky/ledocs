@@ -91,7 +91,7 @@ lvdisplay vg_mysql/lv_mysql
   LV Write Access        read/write
   LV Creation host, time centos-studio, 2021-03-14 23:31:53 +0800
   LV Status              available
-  # open                 0
+  #open                  0
   LV Size                19.98 GiB
   Current LE             5116
   Segments               1
