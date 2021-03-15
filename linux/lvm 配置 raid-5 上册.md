@@ -103,7 +103,7 @@ lvdisplay vg_mysql/lv_mysql
 
 ---
 
-## 第四小 格式化逻辑卷与挂载
+## 第四步 格式化逻辑卷与挂载
 1、格式化为 XFS 文件系统。
 ```bash
 mkfs.xfs /dev/vg_mysql/lv_mysql 
