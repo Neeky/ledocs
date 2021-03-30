@@ -83,6 +83,6 @@ if __name__ == "__main__":
 
 ## 评介
 
-也许是我习惯了字典的写法吧，并没有感受到新语法对我有多大的吸引力。
+也许是我习惯了字典的写法吧，并没有感受到新语法对我有多大的吸引力。 详细信息可以参考官方文档 [结构化模式匹配](https://docs.python.org/3.10/whatsnew/3.10.html#pep-634-structural-pattern-matching) 。
 
 ---
