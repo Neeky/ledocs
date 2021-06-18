@@ -4,7 +4,7 @@
 
 ---
 
-## 组件入门
+## 组件入门一
 假设列表中的每一项都是 "hello world." ，那么列表代码看起来就是这样的。
 ```html
 <ul>
@@ -83,7 +83,7 @@ var app = new Vue({
 
 ---
 
-## Vue 组件再次入门
+## 组件入门二
 上一个例子中我们的组件是“死”的，比如要实现三个不同的列表项 html 可以这样
 ```html
 <ul>
@@ -137,10 +137,11 @@ Vue.component('message-item',{
     </script>
 </html>
 ```
+![sqlpy](static/2021-01/vue-component-02.jpeg)
 
 ---
 
-## Vue 组件终极
+## 组件入门三
 之前我们说 Vue 组件的这一层抽象是为了消除重复，但是我们在 html 里面对于每一个列表项还是创建了一个`message-item`标签，我们可以借助 v-for 指令把这个也消除掉。
 ```html
 <html>
@@ -180,6 +181,7 @@ Vue.component('message-item',{
     </script>
 </html>
 ```
+![sqlpy](static/2021-01/vue-component-02.jpeg)
 
 ---
 
