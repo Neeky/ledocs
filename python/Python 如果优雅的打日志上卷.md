@@ -171,7 +171,7 @@ class Person:
 
     __repr__ = __str__
 
-    # INFO 级别不再打印通用的 DEBUG 日志。
+    #INFO 级别不再打印通用的 DEBUG 日志。
     @desc_instance_method(logging.INFO)
     def say(self):
         print(f"Hello this is  {self.name} .")
