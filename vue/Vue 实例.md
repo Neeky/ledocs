@@ -1,7 +1,7 @@
 ## 创建一个 Vue 实例
 在创建 Vue 实例的时候通过一个“选项对象”的对象来传给 Vue 实例一些基本的信息，比如要挂载到的 DOM 实例，参与到响应式渲染的数据。
 
-![vue instance](static/2020-27/sqlpy-const-floding.jpg)
+![vue instance](static/2020-27/sqlpy-interface.jpg)
 
 ---
 
