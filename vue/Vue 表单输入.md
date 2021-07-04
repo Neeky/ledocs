@@ -105,6 +105,89 @@ const vm = new Vue({
 
 
 ## 选择框
+选择框默认也是单选的。
 ```html
-
+<div id="app">
+    <p>给他一亿:</p>
+    <select v-model="name">
+        <option disabled value="">请选择</option>
+        <option value="多鱼">王多鱼</option>
+        <option value="二小">王二小</option>
+    </select>
+    <p>被选中的人： {{name}}</p>
+</div>
 ```
+![](static/2021-01/vue-select-single.jpg)
+
+---
+
+通过修改 html 属性可以把选择框变成多选的，这种结构下被选择的值保存在数组中是最合适的。
+```html
+<div id="app">
+    <p>给他一亿:</p>
+    <select v-model="name" multiple>
+        <option disabled value="">请选择</option>
+        <option value="多鱼">王多鱼</option>
+        <option value="二小">王二小</option>
+    </select>
+    <p>被选中的人： {{name}}</p>
+</div>
+```
+```js
+const vm = new Vue({
+    el:"#app",
+    data:{
+        ischecked:false,
+        name:"" // 虽然这里设置成 [] 数组最为合适，我把默认值设置为 “” 是为了说明 vue 在我们选择完成之后自动的设置成合适的数据类型
+    }
+});
+```
+![](static/2021-01/vue-select-multi.jpg)
+
+---
+
+可以看到前面的例子中我们重复的写了多次的 `option` 借助 `v-for` & `v-bind` 我们可以把这些重复的内容消去。
+```html
+<div id="app">
+    <p>给他一亿:</p>
+    <select v-model="picked" multiple>
+        <option disabled value="">请选择</option>
+        <option v-for="name in names" v-bind:value="name">{{name}}</option>
+    </select>
+    <p>被选中的人： {{picked}}</p>
+</div>
+```
+```js
+const vm = new Vue({
+    el:"#app",
+    data:{
+        ischecked:false,
+        names:["张三岁","李四年","王五栽"],
+        picked:"",
+    }
+});
+```
+![](static/2021-01/vue-option.jpg)
+
+---
+
+## 修饰符
+`.number` 可以帮我们完成自动的转型
+```html
+<div id="app">
+    今天已经 <input type="text" v-model.number="age"> 岁啦!
+</div>
+```
+![](static/2021-01/vue-number.jpg)
+
+`.trim` 可以帮我们自动去年首尾两端的空格。
+```html
+<div id="app">
+    你的名字 <input type="text" v-model.trim="name">
+    <p>Vue 会帮我们自动去空格 '{{name}}'</p>
+</div>
+```
+
+![](static/2021-01/vue-trim.jpg)
+
+---
