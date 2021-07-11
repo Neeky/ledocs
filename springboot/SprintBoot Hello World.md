@@ -3,6 +3,7 @@
 
 初步试了一下感觉 SpringtBoot 还是比较智能的，记一下今天写的 hello world 方面一次直接下手。
 
+![](static/2021-01/roberto-navarro-b_KtH3ZOA0w-unsplash.jpg)
 
 ---
 
