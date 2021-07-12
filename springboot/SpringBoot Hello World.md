@@ -1,7 +1,7 @@
 ## 背景
-之前一直是用 `django` 来做 web ,最近因为工作上的一些原因，要用 `java` 来做 web 了，当然啦不可能从 socket 开始写，上面已经把框架定好了 `SpringtBoot`。
+之前一直是用 `django` 来做 web ,最近因为工作上的一些原因，要用 `java` 来做 web 了，当然啦不可能从 socket 开始写，上面已经把框架定好了 `SpringBoot`。
 
-初步试了一下感觉 SpringtBoot 还是比较智能的，记一下今天写的 hello world 方面一次直接下手。
+初步试了一下感觉 SpringBoot 还是比较智能的，记一下今天写的 hello world 方面一次直接下手。
 
 ![](static/2021-01/roberto-navarro-b_KtH3ZOA0w-unsplash.jpg)
 
