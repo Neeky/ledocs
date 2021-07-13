@@ -145,8 +145,11 @@ java -jar target/rest-service-0.0.1-SNAPSHOT.jar
 
 ## 例子中用到的关键注解
 1、`@SpringBootApplication` 会去扫项目中所有的控制器，并且会去做一些自动配置。
-2、`@RestController` 会把类标记为“控制器”
-3、`@GetMapping("/greeting")` 映射对应路径的 GET 请求到方法
+
+2、`@RestController` 会把类标记为“控制器”。
+
+3、`@GetMapping("/greeting")` 映射对应路径的 GET 请求到方法。
+
 4、`@RequestParam(value = "name", defaultValue = "World")` 请求的值从哪个请求的参数中取，并且指出默认值是多少。
 
 ---
