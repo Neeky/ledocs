@@ -3,6 +3,8 @@
 
 众所周知，项目中的代码是不会出现在这里的，所以我这里用 google 官方的 helloworld 示例来记录一下 sprintboot 和 grpc 是怎么结合的。
 
+![](static/2021-02/david-dvoracek-0loSkTFwX7w-unsplash.jpg)
+
 ---
 
 ## 第一步 定义c/s之间的交互方式
