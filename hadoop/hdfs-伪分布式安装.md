@@ -88,3 +88,19 @@ root     2786859       1  0 20:42 ?        00:00:06 /usr/local/TencentKona-8.0.1
 root     2787031       1  0 20:43 ?        00:00:06 /usr/local/TencentKona-8.0.10-332/bin/java -Dproc_datanode -Djava.net.preferIPv4Stack=true -Dhadoop.security.logger=ERROR,RFAS -Dyarn.log.dir=/usr/local/hadoop-3.3.4/logs -Dyarn.log.file=hadoop-root-datanode-git-sqlpy-com.log -Dyarn.home.dir=/usr/local/hadoop-3.3.4 -Dyarn.root.logger=INFO,console -Djava.library.path=/usr/local/hadoop-3.3.4/lib/native -Dhadoop.log.dir=/usr/local/hadoop-3.3.4/logs -Dhadoop.log.file=hadoop-root-datanode-git-sqlpy-com.log -Dhadoop.home.dir=/usr/local/hadoop-3.3.4 -Dhadoop.id.str=root -Dhadoop.root.logger=INFO,RFA -Dhadoop.policy.file=hadoop-policy.xml org.apache.hadoop.hdfs.server.datanode.DataNode
 root     2787302       1  0 20:43 ?        00:00:04 /usr/local/TencentKona-8.0.10-332/bin/java -Dproc_secondarynamenode -Djava.net.preferIPv4Stack=true -Dhdfs.audit.logger=INFO,NullAppender -Dhadoop.security.logger=INFO,RFAS -Dyarn.log.dir=/usr/local/hadoop-3.3.4/logs -Dyarn.log.file=hadoop-root-secondarynamenode-git-sqlpy-com.log -Dyarn.home.dir=/usr/local/hadoop-3.3.4 -Dyarn.root.logger=INFO,console -Djava.library.path=/usr/local/hadoop-3.3.4/lib/native -Dhadoop.log.dir=/usr/local/hadoop-3.3.4/logs -Dhadoop.log.file=hadoop-root-secondarynamenode-git-sqlpy-com.log -Dhadoop.home.dir=/usr/local/hadoop-3.3.4 -Dhadoop.id.str=root -Dhadoop.root.logger=INFO,RFA -Dhadoop.policy.file=hadoop-policy.xml org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode
 ```
+
+---
+
+## 第八步 设计读写
+```
+# 创建目录
+bash bin/hdfs dfs -mkdir /temp hdfs://localhost:9000/
+
+# 查看创建的结果
+bash bin/hdfs dfs -ls / hdfs://localhost:9000/
+Found 1 items
+drwxr-xr-x   - root supergroup          0 2022-10-08 21:42 /temp
+Found 1 items
+drwxr-xr-x   - root supergroup          0 2022-10-08 21:42 hdfs://localhost:9000/temp
+```
+---
