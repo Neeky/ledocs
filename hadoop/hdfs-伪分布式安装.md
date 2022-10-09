@@ -93,10 +93,10 @@ root     2787302       1  0 20:43 ?        00:00:04 /usr/local/TencentKona-8.0.1
 
 ## 第八步 设计读写
 ```
-# 创建目录
+#创建目录
 bash bin/hdfs dfs -mkdir /temp hdfs://localhost:9000/
 
-# 查看创建的结果
+#查看创建的结果
 bash bin/hdfs dfs -ls / hdfs://localhost:9000/
 Found 1 items
 drwxr-xr-x   - root supergroup          0 2022-10-08 21:42 /temp
