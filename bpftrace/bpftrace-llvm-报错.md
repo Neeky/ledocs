@@ -7,7 +7,7 @@ bpftrace: symbol lookup error: /lib64/libclang-cpp.so.14: undefined symbol: _ZSt
 
 ```
 
-![mgr-error](static/2020-10/mgr-error.png)
+![sqlpy](static/2020-24/sqlpy-conection.jpg)
 
 ---
 
